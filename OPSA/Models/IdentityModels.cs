@@ -31,5 +31,7 @@ namespace OPSA.Models
         }
 
         public System.Data.Entity.DbSet<OPSA.Models.Events> Events { get; set; }
+
+        public System.Data.Entity.DbSet<OPSA.Models.Employee> Employee { get; set; }
     }
 }

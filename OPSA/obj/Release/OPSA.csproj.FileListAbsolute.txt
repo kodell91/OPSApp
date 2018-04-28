@@ -154,3 +154,6 @@ C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.csprojResolveAssem
 C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.csproj.CoreCompileInputs.cache
 C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.dll
 C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.pdb
+C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.Migrations.firstmigration.resources
+C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.Migrations.secondmodel.resources
+C:\Users\Jimmy O'Dell\source\repos\OPSA\OPSA\obj\Release\OPSA.csproj.GenerateResource.Cache

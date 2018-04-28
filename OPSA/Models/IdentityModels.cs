@@ -29,5 +29,7 @@ namespace OPSA.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<OPSA.Models.Events> Events { get; set; }
     }
 }

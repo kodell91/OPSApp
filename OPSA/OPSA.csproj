@@ -263,9 +263,7 @@
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Event.cs">
-      <DependentUpon>OPSAppModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,23 +272,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Leaderboard.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804271448129_firstmigration.cs" />
+    <Compile Include="Migrations\201804271448129_firstmigration.Designer.cs">
+      <DependentUpon>201804271448129_firstmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804271503459_secondmodel.cs" />
+    <Compile Include="Migrations\201804271503459_secondmodel.Designer.cs">
+      <DependentUpon>201804271503459_secondmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\Events.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="OPSAppModel.Context.cs">
+    <Compile Include="NADSheet.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>OPSAppModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OPSAppModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OPSAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OPSAppModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OPSAppModel.edmx</DependentUpon>
+      <DependentUpon>NADSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -317,23 +317,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="OPSAppModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OPSAppModel.edmx</DependentUpon>
-      <LastGenOutput>OPSAppModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="OPSAppModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OPSAppModel.edmx</DependentUpon>
-      <LastGenOutput>OPSAppModel.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="OPSAppModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OPSAppModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="OPSAppModel.edmx.diagram">
-      <DependentUpon>OPSAppModel.edmx</DependentUpon>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -482,6 +465,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Calendar\Calendar.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\AssignRoleToUser.cshtml" />
+    <Content Include="Views\Account\RegisterRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -494,6 +481,19 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804271448129_firstmigration.resx">
+      <DependentUpon>201804271448129_firstmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804271503459_secondmodel.resx">
+      <DependentUpon>201804271503459_secondmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NADSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NADSheet.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

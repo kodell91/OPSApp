@@ -12,11 +12,11 @@ namespace OPSA.Controllers
 {
     public class CalendarController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private OPSAEntities db = new OPSAEntities();
 
         public CalendarController()
         {
-            db = new ApplicationDbContext();
+            db = new OPSAEntities();
         }
 
         public ActionResult Calendar()
@@ -100,7 +100,7 @@ namespace OPSA.Controllers
 
 //        public JsonResult GetEvents()
 //        {
-//            using (ApplicationDbContext dc = new ApplicationDbContext())
+//            using (OPSAEntities dc = new OPSAEntities())
 //            {
 //                var events = dc.Events.ToList();
 //                return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
@@ -110,7 +110,7 @@ namespace OPSA.Controllers
 //        public JsonResult SaveEvent(Event e)
 //        {
 //            var status = false;
-//            using (ApplicationDbContext dc = new ApplicationDbContext())
+//            using (OPSAEntities dc = new OPSAEntities())
 //            {
 //                if (e.EventID > 0)
 //                {
@@ -138,7 +138,7 @@ namespace OPSA.Controllers
 //        public JsonResult DeleteEvent(int eventID)
 //        {
 //            var status = false;
-//            using (ApplicationDbContext dc = new ApplicationDbContext())
+//            using (OPSAEntities dc = new OPSAEntities())
 //            {
 //                var v = dc.Events.Where(a => a.EventID == eventID).FirstOrDefault();
 //                if (v != null)

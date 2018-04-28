@@ -11,11 +11,11 @@ namespace OPSA.Controllers
     public class RolesController : Controller
     {
 
-        ApplicationDbContext db;
+        OPSAEntities db;
 
         public RolesController()
         {
-            db = new ApplicationDbContext();
+            db = new OPSAEntities();
         }
         // Getting all roles and putting them in an object
         public ActionResult Index()

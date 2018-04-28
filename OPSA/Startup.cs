@@ -17,7 +17,7 @@ namespace OPSA
 
         public void createRolesandUsers()
         {
-            ApplicationDbContext context = new ApplicationDbContext();
+            OPSAEntities context = new OPSAEntities();
 
             var roleAdminRole = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var roleAdminUser = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));

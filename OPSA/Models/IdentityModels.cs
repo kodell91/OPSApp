@@ -18,16 +18,16 @@ namespace OPSA.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class OPSAEntities : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public OPSAEntities()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public static OPSAEntities Create()
         {
-            return new ApplicationDbContext();
+            return new OPSAEntities();
         }
 
         public System.Data.Entity.DbSet<OPSA.Models.Events> Events { get; set; }

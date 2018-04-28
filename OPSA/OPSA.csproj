@@ -145,14 +145,17 @@
     <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Apps72.Dev.Ssrs.ReportViewer.1.3.3\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Apps72.Dev.Ssrs.ReportViewer.1.3.3\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Apps72.Dev.Ssrs.ReportViewer.1.3.3\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Apps72.Dev.Ssrs.ReportViewer.1.3.3\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
@@ -267,18 +270,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Leaderboard.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Leaderboard.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804271448129_firstmigration.cs" />
-    <Compile Include="Migrations\201804271448129_firstmigration.Designer.cs">
-      <DependentUpon>201804271448129_firstmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804271503459_secondmodel.cs" />
-    <Compile Include="Migrations\201804271503459_secondmodel.Designer.cs">
-      <DependentUpon>201804271503459_secondmodel.cs</DependentUpon>
+    <Compile Include="Migrations\201804280227549_tryanyways.cs" />
+    <Compile Include="Migrations\201804280227549_tryanyways.Designer.cs">
+      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -286,7 +280,7 @@
     <Compile Include="Models\Events.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="NADSheet.cs">
+    <Compile Include="Views\Reports\NADSheet.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NADSheet.rpt</DependentUpon>
@@ -294,6 +288,17 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Reports\TestReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\TestSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Reports\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,17 +326,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Leaderboard.xsc">
-      <DependentUpon>Leaderboard.xsd</DependentUpon>
-    </Content>
-    <None Include="Leaderboard.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Leaderboard.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Leaderboard.xss">
-      <DependentUpon>Leaderboard.xsd</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -469,6 +463,17 @@
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\AssignRoleToUser.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
+    <Content Include="Views\Reports\TestSet.xsc">
+      <DependentUpon>TestSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Views\Reports\TestSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Reports\TestSet.xss">
+      <DependentUpon>TestSet.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -484,15 +489,16 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804271448129_firstmigration.resx">
-      <DependentUpon>201804271448129_firstmigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804280227549_tryanyways.resx">
+      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804271503459_secondmodel.resx">
-      <DependentUpon>201804271503459_secondmodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NADSheet.rpt">
+    <EmbeddedResource Include="Views\Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>NADSheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\TestReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TestReport.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

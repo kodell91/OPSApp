@@ -17,11 +17,11 @@ namespace OPSA.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private ApplicationDbContext db;
+        private OPSAEntities db;
 
         public AccountController()
         {
-            db = new ApplicationDbContext();
+            db = new OPSAEntities();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OPSA.Views.Reports {
+namespace OPSA.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace OPSA.Views.Reports {
         
         public override string FullResourceName {
             get {
-                return "OPSA.Views.Reports.TestReport.rpt";
+                return "OPSA.Reports.TestReport.rpt";
             }
             set {
                 // Do nothing

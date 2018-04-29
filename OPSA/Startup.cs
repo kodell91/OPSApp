@@ -14,7 +14,7 @@ namespace OPSA
             ConfigureAuth(app);
             createRolesandUsers();
         }
-
+        //This creates an admin role automatically on startup
         public void createRolesandUsers()
         {
             OPSAEntities context = new OPSAEntities();
@@ -22,7 +22,7 @@ namespace OPSA
             var roleAdminRole = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var roleAdminUser = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
-            if (!roleAdminRole.RoleExists("SuperUser"))
+            if (!roleAdminRole.RoleExists("Admin"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
                 role.Name = "SuperUser";

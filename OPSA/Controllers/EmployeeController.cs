@@ -16,9 +16,13 @@ namespace OPSA.Controllers
         private OPSAEntities db = new OPSAEntities();
 
         // GET: Employee
+        //This index uses the connection string provided in web.config to do SQL on the DB the solution is connected to
+        //It then defines a List of Employees, uses a stored procedure and SQLDataReader to populate the list of Employees
+        //This list of employees is then returned into the view
+
         public ActionResult Index()
         {
-            String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True;server=(local)";
+            String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
             dynamic sql = "dbo.SelectEmployees";
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -49,7 +53,10 @@ namespace OPSA.Controllers
                 }
 
             }
-
+            //foreach(Employee employee in model){
+            //    db.Employee.Add(employee);
+            //    db.SaveChanges();
+            //}
             return View(model);
         }
 

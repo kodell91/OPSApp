@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using OPSA.Models;
+//This class adds deletes and saves events in the event controller
 
 namespace OPSA.Controllers
 {

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace OPSA.Views.Reports {
+namespace OPSA.Reports {
     
     
     /// <summary>
@@ -1686,7 +1686,7 @@ namespace OPSA.Views.Reports {
         }
     }
 }
-namespace OPSA.Views.Reports.TestSetTableAdapters {
+namespace OPSA.Reports.TestSetTableAdapters {
     
     
     /// <summary>

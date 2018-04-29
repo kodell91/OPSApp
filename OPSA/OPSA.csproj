@@ -267,40 +267,27 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NADController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804280227549_tryanyways.cs" />
-    <Compile Include="Migrations\201804280227549_tryanyways.Designer.cs">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281715182_Employee.cs" />
-    <Compile Include="Migrations\201804281715182_Employee.Designer.cs">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281945478_sqlstuff.cs" />
-    <Compile Include="Migrations\201804281945478_sqlstuff.Designer.cs">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281952147_sqlstuff2.cs" />
-    <Compile Include="Migrations\201804281952147_sqlstuff2.Designer.cs">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804282228347_gettingthere.cs" />
-    <Compile Include="Migrations\201804282228347_gettingthere.Designer.cs">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Events.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NADGrossProfit.cs" />
     <Compile Include="Models\Ranking.cs" />
     <Compile Include="Models\Starts.cs" />
-    <Compile Include="Views\Reports\NADSheet.cs">
+    <Compile Include="Models\TPPCGrossProfit.cs" />
+    <Compile Include="Reports\NADSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NADSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\NADSheet.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NADSheet.rpt</DependentUpon>
@@ -308,22 +295,22 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Reports\TestReport.cs">
+    <Compile Include="Reports\TestReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Views\Reports\TestSet.Designer.cs">
+    <Compile Include="Reports\TestSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TestSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Views\Reports\WebForm1.aspx.cs">
+    <Compile Include="Reports\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Reports\WebForm1.aspx.designer.cs">
+    <Compile Include="Reports\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -443,7 +430,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Reports\WebForm1.aspx" />
+    <Content Include="Reports\WebForm1.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -483,7 +470,7 @@
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\AssignRoleToUser.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Views\Reports\TestSet.xsc">
+    <Content Include="Reports\TestSet.xsc">
       <DependentUpon>TestSet.xsd</DependentUpon>
     </Content>
     <Content Include="Views\Employee\Create.cshtml" />
@@ -491,17 +478,29 @@
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
-    <None Include="Views\Reports\TestSet.xsd">
+    <Content Include="Reports\NADSet.xsc">
+      <DependentUpon>NADSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\NADSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NADSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\NADSet.xss">
+      <DependentUpon>NADSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Reports\TestSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TestSet.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Views\Reports\TestSet.xss">
+    <Content Include="Reports\TestSet.xss">
       <DependentUpon>TestSet.xsd</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NAD\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -514,26 +513,11 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804280227549_tryanyways.resx">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281715182_Employee.resx">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281945478_sqlstuff.resx">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281952147_sqlstuff2.resx">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804282228347_gettingthere.resx">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Reports\NADSheet.rpt">
+    <EmbeddedResource Include="Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>NADSheet.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Reports\TestReport.rpt">
+    <EmbeddedResource Include="Reports\TestReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TestReport.cs</LastGenOutput>
     </EmbeddedResource>

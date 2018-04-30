@@ -24,7 +24,7 @@ namespace OPSA.Reports {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class NADSet : global::System.Data.DataSet {
         
-        private @__National_Account_Directors__DataTable _table_National_Account_Directors__;
+        private TopPerformers_PlatinumClubDataTable tableTopPerformers_PlatinumClub;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace OPSA.Reports {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["\'National Account Directors$\'"] != null)) {
-                    base.Tables.Add(new @__National_Account_Directors__DataTable(ds.Tables["\'National Account Directors$\'"]));
+                if ((ds.Tables["TopPerformers PlatinumClub"] != null)) {
+                    base.Tables.Add(new TopPerformers_PlatinumClubDataTable(ds.Tables["TopPerformers PlatinumClub"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace OPSA.Reports {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public @__National_Account_Directors__DataTable @__National_Account_Directors__ {
+        public TopPerformers_PlatinumClubDataTable TopPerformers_PlatinumClub {
             get {
-                return this._table_National_Account_Directors__;
+                return this.tableTopPerformers_PlatinumClub;
             }
         }
         
@@ -152,8 +152,8 @@ namespace OPSA.Reports {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["\'National Account Directors$\'"] != null)) {
-                    base.Tables.Add(new @__National_Account_Directors__DataTable(ds.Tables["\'National Account Directors$\'"]));
+                if ((ds.Tables["TopPerformers PlatinumClub"] != null)) {
+                    base.Tables.Add(new TopPerformers_PlatinumClubDataTable(ds.Tables["TopPerformers PlatinumClub"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace OPSA.Reports {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this._table_National_Account_Directors__ = ((@__National_Account_Directors__DataTable)(base.Tables["\'National Account Directors$\'"]));
+            this.tableTopPerformers_PlatinumClub = ((TopPerformers_PlatinumClubDataTable)(base.Tables["TopPerformers PlatinumClub"]));
             if ((initTable == true)) {
-                if ((this._table_National_Account_Directors__ != null)) {
-                    this._table_National_Account_Directors__.InitVars();
+                if ((this.tableTopPerformers_PlatinumClub != null)) {
+                    this.tableTopPerformers_PlatinumClub.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace OPSA.Reports {
             this.Namespace = "http://tempuri.org/NADSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this._table_National_Account_Directors__ = new @__National_Account_Directors__DataTable();
-            base.Tables.Add(this._table_National_Account_Directors__);
+            this.tableTopPerformers_PlatinumClub = new TopPerformers_PlatinumClubDataTable();
+            base.Tables.Add(this.tableTopPerformers_PlatinumClub);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerialize__National_Account_Directors__() {
+        private bool ShouldSerializeTopPerformers_PlatinumClub() {
             return false;
         }
         
@@ -270,41 +270,71 @@ namespace OPSA.Reports {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void @__National_Account_Directors__RowChangeEventHandler(object sender, @__National_Account_Directors__RowChangeEvent e);
+        public delegate void TopPerformers_PlatinumClubRowChangeEventHandler(object sender, TopPerformers_PlatinumClubRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class @__National_Account_Directors__DataTable : global::System.Data.TypedTableBase<@__National_Account_Directors__Row> {
+        public partial class TopPerformers_PlatinumClubDataTable : global::System.Data.TypedTableBase<TopPerformers_PlatinumClubRow> {
             
-            private global::System.Data.DataColumn columnNADId;
+            private global::System.Data.DataColumn columnTPPCId;
             
-            private global::System.Data.DataColumn columnNADName;
+            private global::System.Data.DataColumn columnTPPCName;
             
-            private global::System.Data.DataColumn columnNADTenure;
+            private global::System.Data.DataColumn columnTPPCTenure;
             
-            private global::System.Data.DataColumn columnNADStartDate;
+            private global::System.Data.DataColumn columnTPPCStartDate;
             
-            private global::System.Data.DataColumn columnNADPosition;
+            private global::System.Data.DataColumn columnTPPCPosition;
             
-            private global::System.Data.DataColumn columnNADBranch;
+            private global::System.Data.DataColumn columnTPPCBranch;
             
-            private global::System.Data.DataColumn columnNADRanking;
+            private global::System.Data.DataColumn columnCompanyNEWGPRank;
             
             private global::System.Data.DataColumn columnBiWeekGP;
             
-            private global::System.Data.DataColumn columnYTDGPCombined;
+            private global::System.Data.DataColumn columnYTDContractGP;
             
-            private global::System.Data.DataColumn columnGPTarget;
+            private global::System.Data.DataColumn columnYTDDirecHireGP;
             
-            private global::System.Data.DataColumn columnPercentGP;
+            private global::System.Data.DataColumn columnAdditionDHAllocation;
+            
+            private global::System.Data.DataColumn columnTotalGP;
+            
+            private global::System.Data.DataColumn columnQualifyingTotalGP;
+            
+            private global::System.Data.DataColumn columnTotalGPTarget;
+            
+            private global::System.Data.DataColumn columnPercentTotalGP;
+            
+            private global::System.Data.DataColumn columnNewContractGP;
+            
+            private global::System.Data.DataColumn columnQualifyingNewGP;
+            
+            private global::System.Data.DataColumn columnNewGPTarget;
+            
+            private global::System.Data.DataColumn columnPercentNewGP;
+            
+            private global::System.Data.DataColumn columnF20;
+            
+            private global::System.Data.DataColumn columnF21;
+            
+            private global::System.Data.DataColumn columnF22;
+            
+            private global::System.Data.DataColumn columnF23;
+            
+            private global::System.Data.DataColumn columnF24;
+            
+            private global::System.Data.DataColumn columnF25;
+            
+            private global::System.Data.DataColumn columnF26;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__DataTable() {
-                this.TableName = "\'National Account Directors$\'";
+            public TopPerformers_PlatinumClubDataTable() {
+                this.TableName = "TopPerformers PlatinumClub";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -312,7 +342,7 @@ namespace OPSA.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal @__National_Account_Directors__DataTable(global::System.Data.DataTable table) {
+            internal TopPerformers_PlatinumClubDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -329,64 +359,64 @@ namespace OPSA.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected @__National_Account_Directors__DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TopPerformers_PlatinumClubDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADIdColumn {
+            public global::System.Data.DataColumn TPPCIdColumn {
                 get {
-                    return this.columnNADId;
+                    return this.columnTPPCId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADNameColumn {
+            public global::System.Data.DataColumn TPPCNameColumn {
                 get {
-                    return this.columnNADName;
+                    return this.columnTPPCName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADTenureColumn {
+            public global::System.Data.DataColumn TPPCTenureColumn {
                 get {
-                    return this.columnNADTenure;
+                    return this.columnTPPCTenure;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADStartDateColumn {
+            public global::System.Data.DataColumn TPPCStartDateColumn {
                 get {
-                    return this.columnNADStartDate;
+                    return this.columnTPPCStartDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADPositionColumn {
+            public global::System.Data.DataColumn TPPCPositionColumn {
                 get {
-                    return this.columnNADPosition;
+                    return this.columnTPPCPosition;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADBranchColumn {
+            public global::System.Data.DataColumn TPPCBranchColumn {
                 get {
-                    return this.columnNADBranch;
+                    return this.columnTPPCBranch;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NADRankingColumn {
+            public global::System.Data.DataColumn CompanyNEWGPRankColumn {
                 get {
-                    return this.columnNADRanking;
+                    return this.columnCompanyNEWGPRank;
                 }
             }
             
@@ -400,25 +430,145 @@ namespace OPSA.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn YTDGPCombinedColumn {
+            public global::System.Data.DataColumn YTDContractGPColumn {
                 get {
-                    return this.columnYTDGPCombined;
+                    return this.columnYTDContractGP;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GPTargetColumn {
+            public global::System.Data.DataColumn YTDDirecHireGPColumn {
                 get {
-                    return this.columnGPTarget;
+                    return this.columnYTDDirecHireGP;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PercentGPColumn {
+            public global::System.Data.DataColumn AdditionDHAllocationColumn {
                 get {
-                    return this.columnPercentGP;
+                    return this.columnAdditionDHAllocation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TotalGPColumn {
+                get {
+                    return this.columnTotalGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn QualifyingTotalGPColumn {
+                get {
+                    return this.columnQualifyingTotalGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TotalGPTargetColumn {
+                get {
+                    return this.columnTotalGPTarget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PercentTotalGPColumn {
+                get {
+                    return this.columnPercentTotalGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NewContractGPColumn {
+                get {
+                    return this.columnNewContractGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn QualifyingNewGPColumn {
+                get {
+                    return this.columnQualifyingNewGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NewGPTargetColumn {
+                get {
+                    return this.columnNewGPTarget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PercentNewGPColumn {
+                get {
+                    return this.columnPercentNewGP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F20Column {
+                get {
+                    return this.columnF20;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F21Column {
+                get {
+                    return this.columnF21;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F22Column {
+                get {
+                    return this.columnF22;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F23Column {
+                get {
+                    return this.columnF23;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F24Column {
+                get {
+                    return this.columnF24;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F25Column {
+                get {
+                    return this.columnF25;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn F26Column {
+                get {
+                    return this.columnF26;
                 }
             }
             
@@ -433,55 +583,96 @@ namespace OPSA.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__Row this[int index] {
+            public TopPerformers_PlatinumClubRow this[int index] {
                 get {
-                    return ((@__National_Account_Directors__Row)(this.Rows[index]));
+                    return ((TopPerformers_PlatinumClubRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event @__National_Account_Directors__RowChangeEventHandler @__National_Account_Directors__RowChanging;
+            public event TopPerformers_PlatinumClubRowChangeEventHandler TopPerformers_PlatinumClubRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event @__National_Account_Directors__RowChangeEventHandler @__National_Account_Directors__RowChanged;
+            public event TopPerformers_PlatinumClubRowChangeEventHandler TopPerformers_PlatinumClubRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event @__National_Account_Directors__RowChangeEventHandler @__National_Account_Directors__RowDeleting;
+            public event TopPerformers_PlatinumClubRowChangeEventHandler TopPerformers_PlatinumClubRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event @__National_Account_Directors__RowChangeEventHandler @__National_Account_Directors__RowDeleted;
+            public event TopPerformers_PlatinumClubRowChangeEventHandler TopPerformers_PlatinumClubRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Add__National_Account_Directors__Row(@__National_Account_Directors__Row row) {
+            public void AddTopPerformers_PlatinumClubRow(TopPerformers_PlatinumClubRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__Row Add__National_Account_Directors__Row(double NADId, string NADName, double NADTenure, System.DateTime NADStartDate, string NADPosition, string NADBranch, double NADRanking, double BiWeekGP, double YTDGPCombined, double GPTarget, double PercentGP) {
-                @__National_Account_Directors__Row row__National_Account_Directors__Row = ((@__National_Account_Directors__Row)(this.NewRow()));
+            public TopPerformers_PlatinumClubRow AddTopPerformers_PlatinumClubRow(
+                        double TPPCId, 
+                        string TPPCName, 
+                        double TPPCTenure, 
+                        System.DateTime TPPCStartDate, 
+                        string TPPCPosition, 
+                        string TPPCBranch, 
+                        double CompanyNEWGPRank, 
+                        double BiWeekGP, 
+                        double YTDContractGP, 
+                        double YTDDirecHireGP, 
+                        string AdditionDHAllocation, 
+                        double TotalGP, 
+                        double QualifyingTotalGP, 
+                        double TotalGPTarget, 
+                        double PercentTotalGP, 
+                        double NewContractGP, 
+                        double QualifyingNewGP, 
+                        double NewGPTarget, 
+                        double PercentNewGP, 
+                        string F20, 
+                        string F21, 
+                        double F22, 
+                        string F23, 
+                        double F24, 
+                        double F25, 
+                        double F26) {
+                TopPerformers_PlatinumClubRow rowTopPerformers_PlatinumClubRow = ((TopPerformers_PlatinumClubRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NADId,
-                        NADName,
-                        NADTenure,
-                        NADStartDate,
-                        NADPosition,
-                        NADBranch,
-                        NADRanking,
+                        TPPCId,
+                        TPPCName,
+                        TPPCTenure,
+                        TPPCStartDate,
+                        TPPCPosition,
+                        TPPCBranch,
+                        CompanyNEWGPRank,
                         BiWeekGP,
-                        YTDGPCombined,
-                        GPTarget,
-                        PercentGP};
-                row__National_Account_Directors__Row.ItemArray = columnValuesArray;
-                this.Rows.Add(row__National_Account_Directors__Row);
-                return row__National_Account_Directors__Row;
+                        YTDContractGP,
+                        YTDDirecHireGP,
+                        AdditionDHAllocation,
+                        TotalGP,
+                        QualifyingTotalGP,
+                        TotalGPTarget,
+                        PercentTotalGP,
+                        NewContractGP,
+                        QualifyingNewGP,
+                        NewGPTarget,
+                        PercentNewGP,
+                        F20,
+                        F21,
+                        F22,
+                        F23,
+                        F24,
+                        F25,
+                        F26};
+                rowTopPerformers_PlatinumClubRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTopPerformers_PlatinumClubRow);
+                return rowTopPerformers_PlatinumClubRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                @__National_Account_Directors__DataTable cln = ((@__National_Account_Directors__DataTable)(base.Clone()));
+                TopPerformers_PlatinumClubDataTable cln = ((TopPerformers_PlatinumClubDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -489,81 +680,128 @@ namespace OPSA.Reports {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new @__National_Account_Directors__DataTable();
+                return new TopPerformers_PlatinumClubDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnNADId = base.Columns["NADId"];
-                this.columnNADName = base.Columns["NADName"];
-                this.columnNADTenure = base.Columns["NADTenure"];
-                this.columnNADStartDate = base.Columns["NADStartDate"];
-                this.columnNADPosition = base.Columns["NADPosition"];
-                this.columnNADBranch = base.Columns["NADBranch"];
-                this.columnNADRanking = base.Columns["NADRanking"];
+                this.columnTPPCId = base.Columns["TPPCId"];
+                this.columnTPPCName = base.Columns["TPPCName"];
+                this.columnTPPCTenure = base.Columns["TPPCTenure"];
+                this.columnTPPCStartDate = base.Columns["TPPCStartDate"];
+                this.columnTPPCPosition = base.Columns["TPPCPosition"];
+                this.columnTPPCBranch = base.Columns["TPPCBranch"];
+                this.columnCompanyNEWGPRank = base.Columns["CompanyNEWGPRank"];
                 this.columnBiWeekGP = base.Columns["BiWeekGP"];
-                this.columnYTDGPCombined = base.Columns["YTDGPCombined"];
-                this.columnGPTarget = base.Columns["GPTarget"];
-                this.columnPercentGP = base.Columns["PercentGP"];
+                this.columnYTDContractGP = base.Columns["YTDContractGP"];
+                this.columnYTDDirecHireGP = base.Columns["YTDDirecHireGP"];
+                this.columnAdditionDHAllocation = base.Columns["AdditionDHAllocation"];
+                this.columnTotalGP = base.Columns["TotalGP"];
+                this.columnQualifyingTotalGP = base.Columns["QualifyingTotalGP"];
+                this.columnTotalGPTarget = base.Columns["TotalGPTarget"];
+                this.columnPercentTotalGP = base.Columns["PercentTotalGP"];
+                this.columnNewContractGP = base.Columns["NewContractGP"];
+                this.columnQualifyingNewGP = base.Columns["QualifyingNewGP"];
+                this.columnNewGPTarget = base.Columns["NewGPTarget"];
+                this.columnPercentNewGP = base.Columns["PercentNewGP"];
+                this.columnF20 = base.Columns["F20"];
+                this.columnF21 = base.Columns["F21"];
+                this.columnF22 = base.Columns["F22"];
+                this.columnF23 = base.Columns["F23"];
+                this.columnF24 = base.Columns["F24"];
+                this.columnF25 = base.Columns["F25"];
+                this.columnF26 = base.Columns["F26"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnNADId = new global::System.Data.DataColumn("NADId", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADId);
-                this.columnNADName = new global::System.Data.DataColumn("NADName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADName);
-                this.columnNADTenure = new global::System.Data.DataColumn("NADTenure", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADTenure);
-                this.columnNADStartDate = new global::System.Data.DataColumn("NADStartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADStartDate);
-                this.columnNADPosition = new global::System.Data.DataColumn("NADPosition", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADPosition);
-                this.columnNADBranch = new global::System.Data.DataColumn("NADBranch", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADBranch);
-                this.columnNADRanking = new global::System.Data.DataColumn("NADRanking", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNADRanking);
+                this.columnTPPCId = new global::System.Data.DataColumn("TPPCId", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCId);
+                this.columnTPPCName = new global::System.Data.DataColumn("TPPCName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCName);
+                this.columnTPPCTenure = new global::System.Data.DataColumn("TPPCTenure", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCTenure);
+                this.columnTPPCStartDate = new global::System.Data.DataColumn("TPPCStartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCStartDate);
+                this.columnTPPCPosition = new global::System.Data.DataColumn("TPPCPosition", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCPosition);
+                this.columnTPPCBranch = new global::System.Data.DataColumn("TPPCBranch", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTPPCBranch);
+                this.columnCompanyNEWGPRank = new global::System.Data.DataColumn("CompanyNEWGPRank", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyNEWGPRank);
                 this.columnBiWeekGP = new global::System.Data.DataColumn("BiWeekGP", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBiWeekGP);
-                this.columnYTDGPCombined = new global::System.Data.DataColumn("YTDGPCombined", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYTDGPCombined);
-                this.columnGPTarget = new global::System.Data.DataColumn("GPTarget", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGPTarget);
-                this.columnPercentGP = new global::System.Data.DataColumn("PercentGP", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPercentGP);
-                this.columnNADName.MaxLength = 255;
-                this.columnNADPosition.MaxLength = 255;
-                this.columnNADBranch.MaxLength = 255;
-                this.ExtendedProperties.Add("Generator_TableVarName", "_table_National_Account_Directors__");
-                this.ExtendedProperties.Add("Generator_UserTableName", "\'National Account Directors$\'");
+                this.columnYTDContractGP = new global::System.Data.DataColumn("YTDContractGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnYTDContractGP);
+                this.columnYTDDirecHireGP = new global::System.Data.DataColumn("YTDDirecHireGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnYTDDirecHireGP);
+                this.columnAdditionDHAllocation = new global::System.Data.DataColumn("AdditionDHAllocation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAdditionDHAllocation);
+                this.columnTotalGP = new global::System.Data.DataColumn("TotalGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalGP);
+                this.columnQualifyingTotalGP = new global::System.Data.DataColumn("QualifyingTotalGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQualifyingTotalGP);
+                this.columnTotalGPTarget = new global::System.Data.DataColumn("TotalGPTarget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalGPTarget);
+                this.columnPercentTotalGP = new global::System.Data.DataColumn("PercentTotalGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPercentTotalGP);
+                this.columnNewContractGP = new global::System.Data.DataColumn("NewContractGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewContractGP);
+                this.columnQualifyingNewGP = new global::System.Data.DataColumn("QualifyingNewGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQualifyingNewGP);
+                this.columnNewGPTarget = new global::System.Data.DataColumn("NewGPTarget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNewGPTarget);
+                this.columnPercentNewGP = new global::System.Data.DataColumn("PercentNewGP", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPercentNewGP);
+                this.columnF20 = new global::System.Data.DataColumn("F20", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF20);
+                this.columnF21 = new global::System.Data.DataColumn("F21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF21);
+                this.columnF22 = new global::System.Data.DataColumn("F22", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF22);
+                this.columnF23 = new global::System.Data.DataColumn("F23", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF23);
+                this.columnF24 = new global::System.Data.DataColumn("F24", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF24);
+                this.columnF25 = new global::System.Data.DataColumn("F25", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF25);
+                this.columnF26 = new global::System.Data.DataColumn("F26", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF26);
+                this.columnTPPCName.MaxLength = 255;
+                this.columnTPPCPosition.MaxLength = 255;
+                this.columnTPPCBranch.MaxLength = 255;
+                this.columnAdditionDHAllocation.MaxLength = 255;
+                this.columnF20.MaxLength = 255;
+                this.columnF21.MaxLength = 255;
+                this.columnF23.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__Row New__National_Account_Directors__Row() {
-                return ((@__National_Account_Directors__Row)(this.NewRow()));
+            public TopPerformers_PlatinumClubRow NewTopPerformers_PlatinumClubRow() {
+                return ((TopPerformers_PlatinumClubRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new @__National_Account_Directors__Row(builder);
+                return new TopPerformers_PlatinumClubRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(@__National_Account_Directors__Row);
+                return typeof(TopPerformers_PlatinumClubRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.@__National_Account_Directors__RowChanged != null)) {
-                    this.@__National_Account_Directors__RowChanged(this, new @__National_Account_Directors__RowChangeEvent(((@__National_Account_Directors__Row)(e.Row)), e.Action));
+                if ((this.TopPerformers_PlatinumClubRowChanged != null)) {
+                    this.TopPerformers_PlatinumClubRowChanged(this, new TopPerformers_PlatinumClubRowChangeEvent(((TopPerformers_PlatinumClubRow)(e.Row)), e.Action));
                 }
             }
             
@@ -571,8 +809,8 @@ namespace OPSA.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.@__National_Account_Directors__RowChanging != null)) {
-                    this.@__National_Account_Directors__RowChanging(this, new @__National_Account_Directors__RowChangeEvent(((@__National_Account_Directors__Row)(e.Row)), e.Action));
+                if ((this.TopPerformers_PlatinumClubRowChanging != null)) {
+                    this.TopPerformers_PlatinumClubRowChanging(this, new TopPerformers_PlatinumClubRowChangeEvent(((TopPerformers_PlatinumClubRow)(e.Row)), e.Action));
                 }
             }
             
@@ -580,8 +818,8 @@ namespace OPSA.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.@__National_Account_Directors__RowDeleted != null)) {
-                    this.@__National_Account_Directors__RowDeleted(this, new @__National_Account_Directors__RowChangeEvent(((@__National_Account_Directors__Row)(e.Row)), e.Action));
+                if ((this.TopPerformers_PlatinumClubRowDeleted != null)) {
+                    this.TopPerformers_PlatinumClubRowDeleted(this, new TopPerformers_PlatinumClubRowChangeEvent(((TopPerformers_PlatinumClubRow)(e.Row)), e.Action));
                 }
             }
             
@@ -589,14 +827,14 @@ namespace OPSA.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.@__National_Account_Directors__RowDeleting != null)) {
-                    this.@__National_Account_Directors__RowDeleting(this, new @__National_Account_Directors__RowChangeEvent(((@__National_Account_Directors__Row)(e.Row)), e.Action));
+                if ((this.TopPerformers_PlatinumClubRowDeleting != null)) {
+                    this.TopPerformers_PlatinumClubRowDeleting(this, new TopPerformers_PlatinumClubRowChangeEvent(((TopPerformers_PlatinumClubRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Remove__National_Account_Directors__Row(@__National_Account_Directors__Row row) {
+            public void RemoveTopPerformers_PlatinumClubRow(TopPerformers_PlatinumClubRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -623,7 +861,7 @@ namespace OPSA.Reports {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "__National_Account_Directors__DataTable";
+                attribute2.FixedValue = "TopPerformers_PlatinumClubDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -667,132 +905,131 @@ namespace OPSA.Reports {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class @__National_Account_Directors__Row : global::System.Data.DataRow {
+        public partial class TopPerformers_PlatinumClubRow : global::System.Data.DataRow {
             
-            private @__National_Account_Directors__DataTable _table_National_Account_Directors__;
+            private TopPerformers_PlatinumClubDataTable tableTopPerformers_PlatinumClub;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal @__National_Account_Directors__Row(global::System.Data.DataRowBuilder rb) : 
+            internal TopPerformers_PlatinumClubRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this._table_National_Account_Directors__ = ((@__National_Account_Directors__DataTable)(this.Table));
+                this.tableTopPerformers_PlatinumClub = ((TopPerformers_PlatinumClubDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double NADId {
+            public double TPPCId {
                 get {
                     try {
-                        return ((double)(this[this._table_National_Account_Directors__.NADIdColumn]));
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.TPPCIdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADId\' in table \'\'National Account Directors$\'\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCId\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this._table_National_Account_Directors__.NADIdColumn] = value;
+                    this[this.tableTopPerformers_PlatinumClub.TPPCIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NADName {
+            public string TPPCName {
                 get {
                     try {
-                        return ((string)(this[this._table_National_Account_Directors__.NADNameColumn]));
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.TPPCNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADName\' in table \'\'National Account Directors$\'\' is DBNull" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCName\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.TPPCNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double TPPCTenure {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.TPPCTenureColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCTenure\' in table \'TopPerformers PlatinumClub\' is DBNull" +
                                 ".", e);
                     }
                 }
                 set {
-                    this[this._table_National_Account_Directors__.NADNameColumn] = value;
+                    this[this.tableTopPerformers_PlatinumClub.TPPCTenureColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double NADTenure {
+            public System.DateTime TPPCStartDate {
                 get {
                     try {
-                        return ((double)(this[this._table_National_Account_Directors__.NADTenureColumn]));
+                        return ((global::System.DateTime)(this[this.tableTopPerformers_PlatinumClub.TPPCStartDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADTenure\' in table \'\'National Account Directors$\'\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.NADTenureColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime NADStartDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this._table_National_Account_Directors__.NADStartDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADStartDate\' in table \'\'National Account Directors$\'\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.NADStartDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NADPosition {
-                get {
-                    try {
-                        return ((string)(this[this._table_National_Account_Directors__.NADPositionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADPosition\' in table \'\'National Account Directors$\'\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.NADPositionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NADBranch {
-                get {
-                    try {
-                        return ((string)(this[this._table_National_Account_Directors__.NADBranchColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADBranch\' in table \'\'National Account Directors$\'\' is DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.NADBranchColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double NADRanking {
-                get {
-                    try {
-                        return ((double)(this[this._table_National_Account_Directors__.NADRankingColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NADRanking\' in table \'\'National Account Directors$\'\' is DBN" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCStartDate\' in table \'TopPerformers PlatinumClub\' is DBN" +
                                 "ull.", e);
                     }
                 }
                 set {
-                    this[this._table_National_Account_Directors__.NADRankingColumn] = value;
+                    this[this.tableTopPerformers_PlatinumClub.TPPCStartDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TPPCPosition {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.TPPCPositionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCPosition\' in table \'TopPerformers PlatinumClub\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.TPPCPositionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TPPCBranch {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.TPPCBranchColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TPPCBranch\' in table \'TopPerformers PlatinumClub\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.TPPCBranchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double CompanyNEWGPRank {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.CompanyNEWGPRankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyNEWGPRank\' in table \'TopPerformers PlatinumClub\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.CompanyNEWGPRankColumn] = value;
                 }
             }
             
@@ -801,199 +1038,625 @@ namespace OPSA.Reports {
             public double BiWeekGP {
                 get {
                     try {
-                        return ((double)(this[this._table_National_Account_Directors__.BiWeekGPColumn]));
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.BiWeekGPColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BiWeekGP\' in table \'\'National Account Directors$\'\' is DBNul" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'BiWeekGP\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.BiWeekGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double YTDContractGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.YTDContractGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'YTDContractGP\' in table \'TopPerformers PlatinumClub\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.YTDContractGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double YTDDirecHireGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.YTDDirecHireGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'YTDDirecHireGP\' in table \'TopPerformers PlatinumClub\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.YTDDirecHireGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string AdditionDHAllocation {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.AdditionDHAllocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AdditionDHAllocation\' in table \'TopPerformers PlatinumClub\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.AdditionDHAllocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double TotalGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.TotalGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalGP\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.TotalGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double QualifyingTotalGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.QualifyingTotalGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QualifyingTotalGP\' in table \'TopPerformers PlatinumClub\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.QualifyingTotalGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double TotalGPTarget {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.TotalGPTargetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalGPTarget\' in table \'TopPerformers PlatinumClub\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.TotalGPTargetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double PercentTotalGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.PercentTotalGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PercentTotalGP\' in table \'TopPerformers PlatinumClub\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.PercentTotalGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double NewContractGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.NewContractGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewContractGP\' in table \'TopPerformers PlatinumClub\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.NewContractGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double QualifyingNewGP {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.QualifyingNewGPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QualifyingNewGP\' in table \'TopPerformers PlatinumClub\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.QualifyingNewGPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public double NewGPTarget {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.NewGPTargetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NewGPTarget\' in table \'TopPerformers PlatinumClub\' is DBNul" +
                                 "l.", e);
                     }
                 }
                 set {
-                    this[this._table_National_Account_Directors__.BiWeekGPColumn] = value;
+                    this[this.tableTopPerformers_PlatinumClub.NewGPTargetColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double YTDGPCombined {
+            public double PercentNewGP {
                 get {
                     try {
-                        return ((double)(this[this._table_National_Account_Directors__.YTDGPCombinedColumn]));
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.PercentNewGPColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'YTDGPCombined\' in table \'\'National Account Directors$\'\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.YTDGPCombinedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double GPTarget {
-                get {
-                    try {
-                        return ((double)(this[this._table_National_Account_Directors__.GPTargetColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'GPTarget\' in table \'\'National Account Directors$\'\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this._table_National_Account_Directors__.GPTargetColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public double PercentGP {
-                get {
-                    try {
-                        return ((double)(this[this._table_National_Account_Directors__.PercentGPColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PercentGP\' in table \'\'National Account Directors$\'\' is DBNu" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'PercentNewGP\' in table \'TopPerformers PlatinumClub\' is DBNu" +
                                 "ll.", e);
                     }
                 }
                 set {
-                    this[this._table_National_Account_Directors__.PercentGPColumn] = value;
+                    this[this.tableTopPerformers_PlatinumClub.PercentNewGPColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADIdNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADIdColumn);
+            public string F20 {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.F20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F20\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F20Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADIdNull() {
-                this[this._table_National_Account_Directors__.NADIdColumn] = global::System.Convert.DBNull;
+            public string F21 {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.F21Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F21\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F21Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADNameNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADNameColumn);
+            public double F22 {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.F22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F22\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F22Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADNameNull() {
-                this[this._table_National_Account_Directors__.NADNameColumn] = global::System.Convert.DBNull;
+            public string F23 {
+                get {
+                    try {
+                        return ((string)(this[this.tableTopPerformers_PlatinumClub.F23Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F23\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F23Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADTenureNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADTenureColumn);
+            public double F24 {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.F24Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F24\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F24Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADTenureNull() {
-                this[this._table_National_Account_Directors__.NADTenureColumn] = global::System.Convert.DBNull;
+            public double F25 {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.F25Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F25\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F25Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADStartDateNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADStartDateColumn);
+            public double F26 {
+                get {
+                    try {
+                        return ((double)(this[this.tableTopPerformers_PlatinumClub.F26Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'F26\' in table \'TopPerformers PlatinumClub\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTopPerformers_PlatinumClub.F26Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADStartDateNull() {
-                this[this._table_National_Account_Directors__.NADStartDateColumn] = global::System.Convert.DBNull;
+            public bool IsTPPCIdNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCIdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADPositionNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADPositionColumn);
+            public void SetTPPCIdNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCIdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADPositionNull() {
-                this[this._table_National_Account_Directors__.NADPositionColumn] = global::System.Convert.DBNull;
+            public bool IsTPPCNameNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADBranchNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADBranchColumn);
+            public void SetTPPCNameNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADBranchNull() {
-                this[this._table_National_Account_Directors__.NADBranchColumn] = global::System.Convert.DBNull;
+            public bool IsTPPCTenureNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCTenureColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNADRankingNull() {
-                return this.IsNull(this._table_National_Account_Directors__.NADRankingColumn);
+            public void SetTPPCTenureNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCTenureColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNADRankingNull() {
-                this[this._table_National_Account_Directors__.NADRankingColumn] = global::System.Convert.DBNull;
+            public bool IsTPPCStartDateNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCStartDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTPPCStartDateNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCStartDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTPPCPositionNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCPositionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTPPCPositionNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCPositionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTPPCBranchNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TPPCBranchColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTPPCBranchNull() {
+                this[this.tableTopPerformers_PlatinumClub.TPPCBranchColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCompanyNEWGPRankNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.CompanyNEWGPRankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCompanyNEWGPRankNull() {
+                this[this.tableTopPerformers_PlatinumClub.CompanyNEWGPRankColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsBiWeekGPNull() {
-                return this.IsNull(this._table_National_Account_Directors__.BiWeekGPColumn);
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.BiWeekGPColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetBiWeekGPNull() {
-                this[this._table_National_Account_Directors__.BiWeekGPColumn] = global::System.Convert.DBNull;
+                this[this.tableTopPerformers_PlatinumClub.BiWeekGPColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsYTDGPCombinedNull() {
-                return this.IsNull(this._table_National_Account_Directors__.YTDGPCombinedColumn);
+            public bool IsYTDContractGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.YTDContractGPColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetYTDGPCombinedNull() {
-                this[this._table_National_Account_Directors__.YTDGPCombinedColumn] = global::System.Convert.DBNull;
+            public void SetYTDContractGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.YTDContractGPColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsGPTargetNull() {
-                return this.IsNull(this._table_National_Account_Directors__.GPTargetColumn);
+            public bool IsYTDDirecHireGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.YTDDirecHireGPColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetGPTargetNull() {
-                this[this._table_National_Account_Directors__.GPTargetColumn] = global::System.Convert.DBNull;
+            public void SetYTDDirecHireGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.YTDDirecHireGPColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPercentGPNull() {
-                return this.IsNull(this._table_National_Account_Directors__.PercentGPColumn);
+            public bool IsAdditionDHAllocationNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.AdditionDHAllocationColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPercentGPNull() {
-                this[this._table_National_Account_Directors__.PercentGPColumn] = global::System.Convert.DBNull;
+            public void SetAdditionDHAllocationNull() {
+                this[this.tableTopPerformers_PlatinumClub.AdditionDHAllocationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTotalGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TotalGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTotalGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.TotalGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsQualifyingTotalGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.QualifyingTotalGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetQualifyingTotalGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.QualifyingTotalGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTotalGPTargetNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.TotalGPTargetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTotalGPTargetNull() {
+                this[this.tableTopPerformers_PlatinumClub.TotalGPTargetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPercentTotalGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.PercentTotalGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPercentTotalGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.PercentTotalGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNewContractGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.NewContractGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNewContractGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.NewContractGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsQualifyingNewGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.QualifyingNewGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetQualifyingNewGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.QualifyingNewGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNewGPTargetNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.NewGPTargetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNewGPTargetNull() {
+                this[this.tableTopPerformers_PlatinumClub.NewGPTargetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPercentNewGPNull() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.PercentNewGPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPercentNewGPNull() {
+                this[this.tableTopPerformers_PlatinumClub.PercentNewGPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF20Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF20Null() {
+                this[this.tableTopPerformers_PlatinumClub.F20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF21Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F21Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF21Null() {
+                this[this.tableTopPerformers_PlatinumClub.F21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF22Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF22Null() {
+                this[this.tableTopPerformers_PlatinumClub.F22Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF23Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F23Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF23Null() {
+                this[this.tableTopPerformers_PlatinumClub.F23Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF24Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F24Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF24Null() {
+                this[this.tableTopPerformers_PlatinumClub.F24Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF25Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F25Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF25Null() {
+                this[this.tableTopPerformers_PlatinumClub.F25Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsF26Null() {
+                return this.IsNull(this.tableTopPerformers_PlatinumClub.F26Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetF26Null() {
+                this[this.tableTopPerformers_PlatinumClub.F26Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1001,22 +1664,22 @@ namespace OPSA.Reports {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class @__National_Account_Directors__RowChangeEvent : global::System.EventArgs {
+        public class TopPerformers_PlatinumClubRowChangeEvent : global::System.EventArgs {
             
-            private @__National_Account_Directors__Row eventRow;
+            private TopPerformers_PlatinumClubRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__RowChangeEvent(@__National_Account_Directors__Row row, global::System.Data.DataRowAction action) {
+            public TopPerformers_PlatinumClubRowChangeEvent(TopPerformers_PlatinumClubRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public @__National_Account_Directors__Row Row {
+            public TopPerformers_PlatinumClubRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1044,7 +1707,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class _National_Account_Directors__TableAdapter : global::System.ComponentModel.Component {
+    public partial class TopPerformers_PlatinumClubTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1058,7 +1721,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public _National_Account_Directors__TableAdapter() {
+        public TopPerformers_PlatinumClubTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1155,34 +1818,64 @@ namespace OPSA.Reports.NADSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "\'National Account Directors$\'";
-            tableMapping.ColumnMappings.Add("NADId", "NADId");
-            tableMapping.ColumnMappings.Add("NADName", "NADName");
-            tableMapping.ColumnMappings.Add("NADTenure", "NADTenure");
-            tableMapping.ColumnMappings.Add("NADStartDate", "NADStartDate");
-            tableMapping.ColumnMappings.Add("NADPosition", "NADPosition");
-            tableMapping.ColumnMappings.Add("NADBranch", "NADBranch");
-            tableMapping.ColumnMappings.Add("NADRanking", "NADRanking");
+            tableMapping.DataSetTable = "TopPerformers PlatinumClub";
+            tableMapping.ColumnMappings.Add("TPPCId", "TPPCId");
+            tableMapping.ColumnMappings.Add("TPPCName", "TPPCName");
+            tableMapping.ColumnMappings.Add("TPPCTenure", "TPPCTenure");
+            tableMapping.ColumnMappings.Add("TPPCStartDate", "TPPCStartDate");
+            tableMapping.ColumnMappings.Add("TPPCPosition", "TPPCPosition");
+            tableMapping.ColumnMappings.Add("TPPCBranch", "TPPCBranch");
+            tableMapping.ColumnMappings.Add("CompanyNEWGPRank", "CompanyNEWGPRank");
             tableMapping.ColumnMappings.Add("BiWeekGP", "BiWeekGP");
-            tableMapping.ColumnMappings.Add("YTDGPCombined", "YTDGPCombined");
-            tableMapping.ColumnMappings.Add("GPTarget", "GPTarget");
-            tableMapping.ColumnMappings.Add("PercentGP", "PercentGP");
+            tableMapping.ColumnMappings.Add("YTDContractGP", "YTDContractGP");
+            tableMapping.ColumnMappings.Add("YTDDirecHireGP", "YTDDirecHireGP");
+            tableMapping.ColumnMappings.Add("AdditionDHAllocation", "AdditionDHAllocation");
+            tableMapping.ColumnMappings.Add("TotalGP", "TotalGP");
+            tableMapping.ColumnMappings.Add("QualifyingTotalGP", "QualifyingTotalGP");
+            tableMapping.ColumnMappings.Add("TotalGPTarget", "TotalGPTarget");
+            tableMapping.ColumnMappings.Add("PercentTotalGP", "PercentTotalGP");
+            tableMapping.ColumnMappings.Add("NewContractGP", "NewContractGP");
+            tableMapping.ColumnMappings.Add("QualifyingNewGP", "QualifyingNewGP");
+            tableMapping.ColumnMappings.Add("NewGPTarget", "NewGPTarget");
+            tableMapping.ColumnMappings.Add("PercentNewGP", "PercentNewGP");
+            tableMapping.ColumnMappings.Add("F20", "F20");
+            tableMapping.ColumnMappings.Add("F21", "F21");
+            tableMapping.ColumnMappings.Add("F22", "F22");
+            tableMapping.ColumnMappings.Add("F23", "F23");
+            tableMapping.ColumnMappings.Add("F24", "F24");
+            tableMapping.ColumnMappings.Add("F25", "F25");
+            tableMapping.ColumnMappings.Add("F26", "F26");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO ['National Account Directors$'] ([NADId], [NADName], [NADTenure], [NADStartDate], [NADPosition], [NADBranch], [NADRanking], [BiWeekGP], [YTDGPCombined], [GPTarget], [PercentGP]) VALUES (@NADId, @NADName, @NADTenure, @NADStartDate, @NADPosition, @NADBranch, @NADRanking, @BiWeekGP, @YTDGPCombined, @GPTarget, @PercentGP)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TopPerformers PlatinumClub] ([TPPCId], [TPPCName], [TPPCTenure], [TPPCStartDate], [TPPCPosition], [TPPCBranch], [CompanyNEWGPRank], [BiWeekGP], [YTDContractGP], [YTDDirecHireGP], [AdditionDHAllocation], [TotalGP], [QualifyingTotalGP], [TotalGPTarget], [PercentTotalGP], [NewContractGP], [QualifyingNewGP], [NewGPTarget], [PercentNewGP], [F20], [F21], [F22], [F23], [F24], [F25], [F26]) VALUES (@TPPCId, @TPPCName, @TPPCTenure, @TPPCStartDate, @TPPCPosition, @TPPCBranch, @CompanyNEWGPRank, @BiWeekGP, @YTDContractGP, @YTDDirecHireGP, @AdditionDHAllocation, @TotalGP, @QualifyingTotalGP, @TotalGPTarget, @PercentTotalGP, @NewContractGP, @QualifyingNewGP, @NewGPTarget, @PercentNewGP, @F20, @F21, @F22, @F23, @F24, @F25, @F26)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADId", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADTenure", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADTenure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADPosition", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADPosition", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADBranch", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADBranch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NADRanking", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NADRanking", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCId", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCTenure", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCTenure", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCStartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCPosition", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCPosition", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TPPCBranch", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TPPCBranch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CompanyNEWGPRank", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompanyNEWGPRank", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BiWeekGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BiWeekGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YTDGPCombined", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YTDGPCombined", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GPTarget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GPTarget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PercentGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PercentGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YTDContractGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YTDContractGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YTDDirecHireGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YTDDirecHireGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdditionDHAllocation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdditionDHAllocation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TotalGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QualifyingTotalGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QualifyingTotalGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalGPTarget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TotalGPTarget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PercentTotalGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PercentTotalGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NewContractGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NewContractGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QualifyingNewGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QualifyingNewGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NewGPTarget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NewGPTarget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PercentNewGP", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PercentNewGP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F20", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F20", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F21", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F21", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F22", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F22", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F23", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F23", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F24", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F24", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F25", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F25", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F26", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F26", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1198,9 +1891,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NADId, NADName, NADTenure, NADStartDate, NADPosition, NADBranch, NADRankin" +
-                "g, BiWeekGP, YTDGPCombined, GPTarget, PercentGP FROM [\'National Account Director" +
-                "s$\']";
+            this._commandCollection[0].CommandText = @"SELECT TPPCId, TPPCName, TPPCTenure, TPPCStartDate, TPPCPosition, TPPCBranch, CompanyNEWGPRank, BiWeekGP, YTDContractGP, YTDDirecHireGP, AdditionDHAllocation, TotalGP, QualifyingTotalGP, TotalGPTarget, PercentTotalGP, NewContractGP, QualifyingNewGP, NewGPTarget, PercentNewGP, F20, F21, F22, F23, F24, F25, F26 FROM dbo.[TopPerformers PlatinumClub]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1208,7 +1899,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NADSet.@__National_Account_Directors__DataTable dataTable) {
+        public virtual int Fill(NADSet.TopPerformers_PlatinumClubDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1221,9 +1912,9 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NADSet.@__National_Account_Directors__DataTable GetData() {
+        public virtual NADSet.TopPerformers_PlatinumClubDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NADSet.@__National_Account_Directors__DataTable dataTable = new NADSet.@__National_Account_Directors__DataTable();
+            NADSet.TopPerformers_PlatinumClubDataTable dataTable = new NADSet.TopPerformers_PlatinumClubDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1231,7 +1922,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NADSet.@__National_Account_Directors__DataTable dataTable) {
+        public virtual int Update(NADSet.TopPerformers_PlatinumClubDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1239,7 +1930,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(NADSet dataSet) {
-            return this.Adapter.Update(dataSet, "\'National Account Directors$\'");
+            return this.Adapter.Update(dataSet, "TopPerformers PlatinumClub");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1261,45 +1952,71 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<double> NADId, string NADName, global::System.Nullable<double> NADTenure, global::System.Nullable<global::System.DateTime> NADStartDate, string NADPosition, string NADBranch, global::System.Nullable<double> NADRanking, global::System.Nullable<double> BiWeekGP, global::System.Nullable<double> YTDGPCombined, global::System.Nullable<double> GPTarget, global::System.Nullable<double> PercentGP) {
-            if ((NADId.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(NADId.Value));
+        public virtual int Insert(
+                    global::System.Nullable<double> TPPCId, 
+                    string TPPCName, 
+                    global::System.Nullable<double> TPPCTenure, 
+                    global::System.Nullable<global::System.DateTime> TPPCStartDate, 
+                    string TPPCPosition, 
+                    string TPPCBranch, 
+                    global::System.Nullable<double> CompanyNEWGPRank, 
+                    global::System.Nullable<double> BiWeekGP, 
+                    global::System.Nullable<double> YTDContractGP, 
+                    global::System.Nullable<double> YTDDirecHireGP, 
+                    string AdditionDHAllocation, 
+                    global::System.Nullable<double> TotalGP, 
+                    global::System.Nullable<double> QualifyingTotalGP, 
+                    global::System.Nullable<double> TotalGPTarget, 
+                    global::System.Nullable<double> PercentTotalGP, 
+                    global::System.Nullable<double> NewContractGP, 
+                    global::System.Nullable<double> QualifyingNewGP, 
+                    global::System.Nullable<double> NewGPTarget, 
+                    global::System.Nullable<double> PercentNewGP, 
+                    string F20, 
+                    string F21, 
+                    global::System.Nullable<double> F22, 
+                    string F23, 
+                    global::System.Nullable<double> F24, 
+                    global::System.Nullable<double> F25, 
+                    global::System.Nullable<double> F26) {
+            if ((TPPCId.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(TPPCId.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((NADName == null)) {
+            if ((TPPCName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NADName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TPPCName));
             }
-            if ((NADTenure.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(NADTenure.Value));
+            if ((TPPCTenure.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(TPPCTenure.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((NADStartDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(NADStartDate.Value));
+            if ((TPPCStartDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(TPPCStartDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((NADPosition == null)) {
+            if ((TPPCPosition == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(NADPosition));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(TPPCPosition));
             }
-            if ((NADBranch == null)) {
+            if ((TPPCBranch == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(NADBranch));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TPPCBranch));
             }
-            if ((NADRanking.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(NADRanking.Value));
+            if ((CompanyNEWGPRank.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(CompanyNEWGPRank.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -1310,23 +2027,113 @@ namespace OPSA.Reports.NADSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((YTDGPCombined.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(YTDGPCombined.Value));
+            if ((YTDContractGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(YTDContractGP.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((GPTarget.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((double)(GPTarget.Value));
+            if ((YTDDirecHireGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((double)(YTDDirecHireGP.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((PercentGP.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((double)(PercentGP.Value));
+            if ((AdditionDHAllocation == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(AdditionDHAllocation));
+            }
+            if ((TotalGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(TotalGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((QualifyingTotalGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(QualifyingTotalGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((TotalGPTarget.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((double)(TotalGPTarget.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((PercentTotalGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((double)(PercentTotalGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((NewContractGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((double)(NewContractGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((QualifyingNewGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((double)(QualifyingNewGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((NewGPTarget.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((double)(NewGPTarget.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((PercentNewGP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((double)(PercentNewGP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((F20 == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(F20));
+            }
+            if ((F21 == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(F21));
+            }
+            if ((F22.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((double)(F22.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((F23 == null)) {
+                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(F23));
+            }
+            if ((F24.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((double)(F24.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((F25.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((double)(F25.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((F26.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((double)(F26.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1357,7 +2164,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private _National_Account_Directors__TableAdapter @__National_Account_Directors__TableAdapter;
+        private TopPerformers_PlatinumClubTableAdapter _topPerformers_PlatinumClubTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1379,12 +2186,12 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public _National_Account_Directors__TableAdapter _National_Account_Directors__TableAdapter {
+        public TopPerformers_PlatinumClubTableAdapter TopPerformers_PlatinumClubTableAdapter {
             get {
-                return this.@__National_Account_Directors__TableAdapter;
+                return this._topPerformers_PlatinumClubTableAdapter;
             }
             set {
-                this.@__National_Account_Directors__TableAdapter = value;
+                this._topPerformers_PlatinumClubTableAdapter = value;
             }
         }
         
@@ -1407,9 +2214,9 @@ namespace OPSA.Reports.NADSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this.@__National_Account_Directors__TableAdapter != null) 
-                            && (this.@__National_Account_Directors__TableAdapter.Connection != null))) {
-                    return this.@__National_Account_Directors__TableAdapter.Connection;
+                if (((this._topPerformers_PlatinumClubTableAdapter != null) 
+                            && (this._topPerformers_PlatinumClubTableAdapter.Connection != null))) {
+                    return this._topPerformers_PlatinumClubTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1424,7 +2231,7 @@ namespace OPSA.Reports.NADSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this.@__National_Account_Directors__TableAdapter != null)) {
+                if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1438,12 +2245,12 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(NADSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this.@__National_Account_Directors__TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.@__National_Account_Directors__.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TopPerformers_PlatinumClub.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this.@__National_Account_Directors__TableAdapter.Update(updatedRows));
+                    result = (result + this._topPerformers_PlatinumClubTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1457,11 +2264,11 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(NADSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this.@__National_Account_Directors__TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.@__National_Account_Directors__.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TopPerformers_PlatinumClub.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this.@__National_Account_Directors__TableAdapter.Update(addedRows));
+                    result = (result + this._topPerformers_PlatinumClubTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1475,11 +2282,11 @@ namespace OPSA.Reports.NADSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(NADSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this.@__National_Account_Directors__TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.@__National_Account_Directors__.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TopPerformers_PlatinumClub.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this.@__National_Account_Directors__TableAdapter.Update(deletedRows));
+                    result = (result + this._topPerformers_PlatinumClubTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1522,8 +2329,8 @@ namespace OPSA.Reports.NADSetTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this.@__National_Account_Directors__TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this.@__National_Account_Directors__TableAdapter.Connection) == false))) {
+            if (((this._topPerformers_PlatinumClubTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._topPerformers_PlatinumClubTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1559,13 +2366,13 @@ namespace OPSA.Reports.NADSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this.@__National_Account_Directors__TableAdapter != null)) {
-                    revertConnections.Add(this.@__National_Account_Directors__TableAdapter, this.@__National_Account_Directors__TableAdapter.Connection);
-                    this.@__National_Account_Directors__TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this.@__National_Account_Directors__TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this.@__National_Account_Directors__TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this.@__National_Account_Directors__TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this.@__National_Account_Directors__TableAdapter.Adapter);
+                if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
+                    revertConnections.Add(this._topPerformers_PlatinumClubTableAdapter, this._topPerformers_PlatinumClubTableAdapter.Connection);
+                    this._topPerformers_PlatinumClubTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._topPerformers_PlatinumClubTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._topPerformers_PlatinumClubTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._topPerformers_PlatinumClubTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._topPerformers_PlatinumClubTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1626,9 +2433,9 @@ namespace OPSA.Reports.NADSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this.@__National_Account_Directors__TableAdapter != null)) {
-                    this.@__National_Account_Directors__TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this.@__National_Account_Directors__TableAdapter]));
-                    this.@__National_Account_Directors__TableAdapter.Transaction = null;
+                if ((this._topPerformers_PlatinumClubTableAdapter != null)) {
+                    this._topPerformers_PlatinumClubTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._topPerformers_PlatinumClubTableAdapter]));
+                    this._topPerformers_PlatinumClubTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

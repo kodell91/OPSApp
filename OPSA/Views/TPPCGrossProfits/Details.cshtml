@@ -1,0 +1,106 @@
+﻿@model OPSA.Models.TPPCGrossProfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TPPCGrossProfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewGPRanking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewGPRanking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YTDContractGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YTDContractGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YTDDirectHireGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YTDDirectHireGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionDHAllocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionDHAllocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QualifyingTotalGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QualifyingTotalGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewContractGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewContractGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QualifyingNewGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QualifyingNewGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewGPTarget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewGPTarget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PercentNewGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PercentNewGP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TPPCId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -268,10 +268,37 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NADController.cs" />
+    <Compile Include="Controllers\NADGrossProfitsController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TPPCGrossProfitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804280227549_tryanyways.cs" />
+    <Compile Include="Migrations\201804280227549_tryanyways.Designer.cs">
+      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804281715182_Employee.cs" />
+    <Compile Include="Migrations\201804281715182_Employee.Designer.cs">
+      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804281945478_sqlstuff.cs" />
+    <Compile Include="Migrations\201804281945478_sqlstuff.Designer.cs">
+      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804281952147_sqlstuff2.cs" />
+    <Compile Include="Migrations\201804281952147_sqlstuff2.Designer.cs">
+      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804282228347_gettingthere.cs" />
+    <Compile Include="Migrations\201804282228347_gettingthere.Designer.cs">
+      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804300441386_stuff.cs" />
+    <Compile Include="Migrations\201804300441386_stuff.Designer.cs">
+      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -497,6 +524,16 @@
     <Content Include="Reports\TestSet.xss">
       <DependentUpon>TestSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\NADGrossProfits\Create.cshtml" />
+    <Content Include="Views\NADGrossProfits\Delete.cshtml" />
+    <Content Include="Views\NADGrossProfits\Details.cshtml" />
+    <Content Include="Views\NADGrossProfits\Edit.cshtml" />
+    <Content Include="Views\NADGrossProfits\Index.cshtml" />
+    <Content Include="Views\TPPCGrossProfits\Create.cshtml" />
+    <Content Include="Views\TPPCGrossProfits\Delete.cshtml" />
+    <Content Include="Views\TPPCGrossProfits\Details.cshtml" />
+    <Content Include="Views\TPPCGrossProfits\Edit.cshtml" />
+    <Content Include="Views\TPPCGrossProfits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -513,6 +550,24 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804280227549_tryanyways.resx">
+      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804281715182_Employee.resx">
+      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804281945478_sqlstuff.resx">
+      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804281952147_sqlstuff2.resx">
+      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804282228347_gettingthere.resx">
+      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804300441386_stuff.resx">
+      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>NADSheet.cs</LastGenOutput>

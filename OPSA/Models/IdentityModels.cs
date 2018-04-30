@@ -34,6 +34,10 @@ namespace OPSA.Models
 
         public System.Data.Entity.DbSet<OPSA.Models.Employee> Employee { get; set; }
 
+        public System.Data.Entity.DbSet<OPSA.Models.NADGrossProfit> NADGrossProfits { get; set; }
+
+        public System.Data.Entity.DbSet<OPSA.Models.TPPCGrossProfit> TPPCGrossProfits { get; set; }
+
         //public System.Data.Entity.DbSet<OPSA.Models.>
     }
 }

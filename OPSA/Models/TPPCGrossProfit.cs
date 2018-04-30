@@ -10,17 +10,21 @@ namespace OPSA.Models
     {
         [Key]
         public int TPPCId { get; set; }
-        public int EmployeeId { get; set; }
-        public int NewGPRanking { get; set; }
-        public int YTDContractGP { get; set; }
-        public int YTDDirectHireGP { get; set; }
-        public int AdditionDHAllocation { get; set; }
-        public int TotalGP { get; set; }
-        public int QualifyingTotalGP { get; set; }
-        public int NewContractGP { get; set; }
-        public int QualifyingNewGP { get; set; }
-        public int NewGPTarget { get; set; }
-        public float PercentNewGP { get; set; }
+        //public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
+        public double NewGPRanking { get; set; }
+        public double BiWeekGP { get; set; }
+        public double YTDContractGP { get; set; }
+        public double YTDDirectHireGP { get; set; }
+        public double AdditionDHAllocation { get; set; }
+        public double TotalGP { get; set; }
+        public double QualifyingTotalGP { get; set; }
+        public double TotalGPTarget { get; set; }
+        public double PercentTotalGP { get; set; }
+        public double NewContractGP { get; set; }
+        public double QualifyingNewGP { get; set; }
+        public double NewGPTarget { get; set; }
+        public double PercentNewGP { get; set; }
 
     }
 }

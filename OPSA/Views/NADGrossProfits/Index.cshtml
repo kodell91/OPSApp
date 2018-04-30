@@ -9,55 +9,65 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.EmployeeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BiWeeklyGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YTDDirectHireGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YTDGPCombined)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GPTarget)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PercentGP)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmployeeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BiWeeklyGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YTDGPCombined)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GPTarget)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PercentGP)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.NADId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.NADId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.NADId })
-        </td>
-    </tr>
-}
-
+<table class="ui celled table" id="myTable" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BiWeeklyGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YTDDirectHireGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YTDGPCombined)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GPTarget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentGP)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmployeeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BiWeeklyGP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YTDGPCombined)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GPTarget)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PercentGP)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NADId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NADId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NADId })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable({
+            "autoWidth": true
+        });
+    });
+</script>

@@ -9,55 +9,57 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.EmployeeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NewGPRanking)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BiWeekGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YTDContractGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.YTDDirectHireGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AdditionDHAllocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TotalGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.QualifyingTotalGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TotalGPTarget)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PercentTotalGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NewContractGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.QualifyingNewGP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NewGPTarget)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PercentNewGP)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<table id="myTable" class="ui celled table" style="width:100%" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewGPRanking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BiWeekGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YTDContractGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YTDDirectHireGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdditionDHAllocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QualifyingTotalGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalGPTarget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentTotalGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewContractGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QualifyingNewGP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewGPTarget)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentNewGP)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.EmployeeName)
@@ -107,6 +109,13 @@
                 @Html.ActionLink("Delete", "Delete", new { id = item.TPPCId })
             </td>
         </tr>
-    }
-
+        }
+    </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable({
+            "autoWidth": true
+        });
+    });
+</script>

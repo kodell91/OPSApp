@@ -38,6 +38,8 @@ namespace OPSA.Models
 
         public System.Data.Entity.DbSet<OPSA.Models.TPPCGrossProfit> TPPCGrossProfits { get; set; }
 
+        public System.Data.Entity.DbSet<OPSA.Models.MonthlyRecruiting> MonthlyRecruitings { get; set; }
+
         //public System.Data.Entity.DbSet<OPSA.Models.>
     }
 }

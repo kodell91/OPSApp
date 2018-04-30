@@ -267,6 +267,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MonthlyRecruitingsController.cs" />
     <Compile Include="Controllers\NADController.cs" />
     <Compile Include="Controllers\NADGrossProfitsController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
@@ -298,6 +299,14 @@
     <Compile Include="Migrations\201804300441386_stuff.Designer.cs">
       <DependentUpon>201804300441386_stuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804301406247_recruiting.cs" />
+    <Compile Include="Migrations\201804301406247_recruiting.Designer.cs">
+      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804301413557_gahhhhh.cs" />
+    <Compile Include="Migrations\201804301413557_gahhhhh.Designer.cs">
+      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
@@ -307,7 +316,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NADGrossProfit.cs" />
     <Compile Include="Models\Ranking.cs" />
-    <Compile Include="Models\Starts.cs" />
+    <Compile Include="Models\MonthlyRecruiting.cs" />
     <Compile Include="Models\TPPCGrossProfit.cs" />
     <Compile Include="Reports\NADSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -534,6 +543,11 @@
     <Content Include="Views\TPPCGrossProfits\Details.cshtml" />
     <Content Include="Views\TPPCGrossProfits\Edit.cshtml" />
     <Content Include="Views\TPPCGrossProfits\Index.cshtml" />
+    <Content Include="Views\MonthlyRecruitings\Create.cshtml" />
+    <Content Include="Views\MonthlyRecruitings\Delete.cshtml" />
+    <Content Include="Views\MonthlyRecruitings\Details.cshtml" />
+    <Content Include="Views\MonthlyRecruitings\Edit.cshtml" />
+    <Content Include="Views\MonthlyRecruitings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -567,6 +581,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804300441386_stuff.resx">
       <DependentUpon>201804300441386_stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301406247_recruiting.resx">
+      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804301413557_gahhhhh.resx">
+      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

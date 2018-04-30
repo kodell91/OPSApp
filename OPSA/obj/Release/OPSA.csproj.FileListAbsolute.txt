@@ -318,3 +318,5 @@ C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.sqlstuff2.re
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.gettingthere.resources
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.csproj.GenerateResource.Cache
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.stuff.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.recruiting.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.gahhhhh.resources

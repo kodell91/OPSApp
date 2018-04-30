@@ -5,17 +5,17 @@
 }
 
 <h2>Details</h2>
-
+@*FIXED: EmployeeId -> EmployeeName, Added TotalGPTarget and Percent Total GP*@
 <div>
     <h4>TPPCGrossProfit</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.EmployeeId)
+            @Html.DisplayNameFor(model => model.EmployeeName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EmployeeId)
+            @Html.DisplayFor(model => model.EmployeeName)
         </dd>
 
         <dt>
@@ -64,6 +64,20 @@
 
         <dd>
             @Html.DisplayFor(model => model.QualifyingTotalGP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalGPTarget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGPTarget)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PercentTotalGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PercentTotalGP)
         </dd>
 
         <dt>

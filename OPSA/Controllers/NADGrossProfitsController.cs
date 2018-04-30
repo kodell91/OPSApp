@@ -81,7 +81,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NADId,EmloyeeId,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
+        public ActionResult Create([Bind(Include = "NADId,EmployeeName,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +113,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NADId,EmloyeeId,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
+        public ActionResult Edit([Bind(Include = "NADId,EmployeeName,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
         {
             if (ModelState.IsValid)
             {

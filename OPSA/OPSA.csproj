@@ -275,39 +275,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804280227549_tryanyways.cs" />
-    <Compile Include="Migrations\201804280227549_tryanyways.Designer.cs">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281715182_Employee.cs" />
-    <Compile Include="Migrations\201804281715182_Employee.Designer.cs">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281945478_sqlstuff.cs" />
-    <Compile Include="Migrations\201804281945478_sqlstuff.Designer.cs">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281952147_sqlstuff2.cs" />
-    <Compile Include="Migrations\201804281952147_sqlstuff2.Designer.cs">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804282228347_gettingthere.cs" />
-    <Compile Include="Migrations\201804282228347_gettingthere.Designer.cs">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804300441386_stuff.cs" />
-    <Compile Include="Migrations\201804300441386_stuff.Designer.cs">
-      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804301406247_recruiting.cs" />
-    <Compile Include="Migrations\201804301406247_recruiting.Designer.cs">
-      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804301413557_gahhhhh.cs" />
-    <Compile Include="Migrations\201804301413557_gahhhhh.Designer.cs">
-      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -564,30 +531,6 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804280227549_tryanyways.resx">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281715182_Employee.resx">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281945478_sqlstuff.resx">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281952147_sqlstuff2.resx">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804282228347_gettingthere.resx">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804300441386_stuff.resx">
-      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804301406247_recruiting.resx">
-      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804301413557_gahhhhh.resx">
-      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>NADSheet.cs</LastGenOutput>

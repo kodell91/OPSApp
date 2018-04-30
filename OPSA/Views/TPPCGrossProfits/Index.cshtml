@@ -5,7 +5,7 @@
 }
 
 <h2>Index</h2>
-@*TODO ADD AND FIX NAMES FOR THESE PAGES*@
+@*FIXED: EmployeeId -> EmployeeName, Added TotalGPTarget and Percent Total GP*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -56,56 +56,57 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmployeeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NewGPRanking)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BiWeekGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YTDContractGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdditionDHAllocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QualifyingTotalGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalGPTarget)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PercentTotalGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NewContractGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QualifyingNewGP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NewGPTarget)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PercentNewGP)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.TPPCId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.TPPCId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.TPPCId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewGPRanking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BiWeekGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YTDContractGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionDHAllocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualifyingTotalGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGPTarget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentTotalGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewContractGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualifyingNewGP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewGPTarget)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentNewGP)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TPPCId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TPPCId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TPPCId })
+            </td>
+        </tr>
+    }
 
 </table>

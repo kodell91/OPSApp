@@ -12,7 +12,7 @@ namespace OPSA.Migrations
                 c => new
                     {
                         EmployeeId = c.Int(nullable: false, identity: true),
-                        EmployeeName = c.String(),
+                        EmployeeName = c.String(nullable: false),
                         RankDifference = c.Int(nullable: false),
                         PreviousRank = c.Int(nullable: false),
                         CompanyRank = c.Int(nullable: false),
@@ -31,9 +31,5 @@ namespace OPSA.Migrations
             
         }
         
-        public override void Down()
-        {
-            DropTable("dbo.MonthlyRecruitings");
-        }
     }
 }

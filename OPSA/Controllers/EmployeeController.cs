@@ -24,11 +24,11 @@ namespace OPSA.Controllers
         {
             String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
-            dynamic sql = "dbo.SelectEmployees";
+            dynamic sql = "dbo.SelectEmployee";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            var model = new List<Employee>();
+            //var model = new List<Employee>();
             using (conn)
             {
                 conn.Open();
@@ -38,28 +38,47 @@ namespace OPSA.Controllers
                     while (rdr.Read())
                     {
                         //Console.WriteLine(rdr.GetString(1));
-
                         var employee = new Employee();
-                        employee.EmployeeId = rdr.GetInt32(0);
-                        employee.EmployeeName = rdr.GetString(1);
-                        employee.Tenure = rdr.GetInt32(2);
-                        employee.StartDate = rdr.GetDateTime(3);
-                        employee.Position = rdr.GetString(4);
-                        employee.Branch = rdr.GetString(5);
+                        //employee.EmployeeId = rdr.GetInt32(0);
+                        employee.EmployeeName = rdr.GetString(0);
+                        employee.Tenure = rdr.GetInt32(1);
+                        employee.StartDate = rdr.GetDateTime(2);
+                        employee.Position = rdr.GetString(3);
+                        employee.Branch = rdr.GetString(4);
 
-                        model.Add(employee);
+                        SaveIfNew(employee);
+                        //model.Add(employee);
                     }
                     rdr.NextResult();
                 }
-
             }
-            //foreach(Employee employee in model){
-            //    db.Employee.Add(employee);
-            //    db.SaveChanges();
-            //}
-            return View(model);
+            return View(db.Employees.ToList());
         }
+        //TODO:Comment this.
+        public void SaveIfNew(Employee m)
+        {
+            using (OPSAEntities db = new OPSAEntities())
+            {
 
+                if (m.EmployeeId >= 0)
+                {
+                    var v = db.Employees.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
+                    if (v != null)
+                    {
+                        v.EmployeeName = m.EmployeeName;
+                        v.Tenure = m.Tenure;
+                        v.StartDate = m.StartDate;
+                        v.Position = m.Position;
+                        v.Branch = m.Branch;
+                    }
+                    else if (v == null)
+                    {
+                        db.Employees.Add(m);
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
         // GET: Employee/Details/5
         public ActionResult Details(int? id)
         {
@@ -67,7 +86,7 @@ namespace OPSA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.Employee.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -90,7 +109,7 @@ namespace OPSA.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Employee.Add(employee);
+                db.Employees.Add(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -105,7 +124,7 @@ namespace OPSA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.Employee.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -136,7 +155,7 @@ namespace OPSA.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Employee employee = db.Employee.Find(id);
+            Employee employee = db.Employees.Find(id);
             if (employee == null)
             {
                 return HttpNotFound();
@@ -149,8 +168,8 @@ namespace OPSA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Employee employee = db.Employee.Find(id);
-            db.Employee.Remove(employee);
+            Employee employee = db.Employees.Find(id);
+            db.Employees.Remove(employee);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

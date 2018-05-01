@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace OPSA.Models
 {
@@ -37,7 +38,6 @@ namespace OPSA.Models
         public double PositionRank { get; set; }
 
         [DisplayName("Score")]
-        [NotMapped]
         public double Score { get; set; }
 
         //public class Starts

@@ -32,7 +32,7 @@ namespace OPSA.Models
 
         public System.Data.Entity.DbSet<OPSA.Models.Events> Events { get; set; }
 
-        public System.Data.Entity.DbSet<OPSA.Models.Employee> Employee { get; set; }
+        public System.Data.Entity.DbSet<OPSA.Models.Employee> Employees { get; set; }
 
         public System.Data.Entity.DbSet<OPSA.Models.NADGrossProfit> NADGrossProfits { get; set; }
 

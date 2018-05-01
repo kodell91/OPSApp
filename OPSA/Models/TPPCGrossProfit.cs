@@ -24,17 +24,14 @@ namespace OPSA.Models
         [DisplayName("Bi-Weekly Gross Profit")]
         public double BiWeekGP { get; set; }
 
-        [NotMapped]
         [DisplayFormat(DataFormatString = "{0:C0}")]
         [DisplayName("YTD Contract GP")]
         public double YTDContractGP { get; set; }
 
-        [NotMapped]
         [DisplayFormat(DataFormatString = "{0:C0}")]
         [DisplayName("YTD Direct Hire GP")]
         public double YTDDirectHireGP { get; set; }
 
-        [NotMapped]
         [DisplayFormat(DataFormatString = "{0:C0}")]
         [DisplayName("Additional Direct Hire Allocation")]
         public double AdditionDHAllocation { get; set; }

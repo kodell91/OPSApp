@@ -24,7 +24,7 @@ namespace OPSA.Controllers
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            var model = new List<MonthlyRecruiting>();
+            //var model = new List<MonthlyRecruiting>();
 
             using (conn)
             {
@@ -37,10 +37,6 @@ namespace OPSA.Controllers
                         //Console.WriteLine(rdr.GetString(1));
 
                         var monthlyRecruiting = new MonthlyRecruiting();
-                        //var ranking = new MonthlyRecruiting.Ranking();
-                        //var starts = new
-                        //monthlyRecruiting.TPPCId = rdr.GetInt32(0);
-                        //monthlyRecruiting.EmployeeId = rdr.GetString(1);
                         monthlyRecruiting.EmployeeName = rdr.GetString(0);
                         monthlyRecruiting.RankDifference = rdr.GetInt32(1);
                         monthlyRecruiting.PreviousRank = rdr.GetInt32(2);
@@ -56,45 +52,48 @@ namespace OPSA.Controllers
                         monthlyRecruiting.NewPositions = rdr.GetDouble(12);
                         monthlyRecruiting.PercentExpectations = rdr.GetDouble(13);
 
-                        model.Add(monthlyRecruiting);
-//                        SaveIfNew(monthlyRecruiting);
+                        SaveIfNew(monthlyRecruiting);
                     }
                     rdr.NextResult();
                 }
-                return View(model);
+            }
+            return View(db.MonthlyRecruitings.ToList());
+        }
+        public void SaveIfNew(MonthlyRecruiting m)
+        {
+            using (OPSAEntities db = new OPSAEntities())
+            {
+
+                if (m.EmployeeId >= 0)
+                {
+                    var v = db.MonthlyRecruitings.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
+                    if (v != null)
+                    {
+                        v.EmployeeName = m.EmployeeName;
+                        v.RankDifference = m.RankDifference;
+                        v.PreviousRank = m.PreviousRank;
+                        v.CompanyRank = m.CompanyRank;
+                        v.PositionRank = m.PositionRank;
+                        v.Score = m.Score;
+                        v.Total4WKStarts = m.Total4WKStarts;
+                        v.CurrentHeadCount = m.CurrentHeadCount;
+                        v.MonthHCGoal = m.MonthHCGoal;
+                        v.Prescreens = m.PreviousRank;
+                        v.Sendouts = m.Sendouts;
+                        v.ClientVisits = m.ClientVisits;
+                        v.NewPositions = m.NewPositions;
+                        v.PercentExpectations = m.PercentExpectations;
+                    } 
+                    else if(v == null)
+                    {
+                        db.MonthlyRecruitings.Add(m);
+                    }
+                    
+                }
+                db.SaveChanges();
             }
         }
-        //public void SaveIfNew(MonthlyRecruiting m)
-        //{
-        //    using (db)
-        //    {
-        //        if (m.EmployeeId > 0)
-        //        {
-        //            var v = db.MonthlyRecruitings.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
-        //            if (v != null)
-        //            {
-        //                v.RankDifference = m.RankDifference;
-        //                v.PreviousRank = m.PreviousRank;
-        //                v.CompanyRank = m.CompanyRank;
-        //                v.PositionRank = m.PositionRank;
-        //                v.Score = m.Score;
-        //                v.Total4WKStarts = m.Total4WKStarts;
-        //                v.CurrentHeadCount = m.CurrentHeadCount;
-        //                v.MonthHCGoal = m.MonthHCGoal;
-        //                v.Prescreens = m.PreviousRank;
-        //                v.Sendouts = m.Sendouts;
-        //                v.ClientVisits = m.ClientVisits;
-        //                v.NewPositions = m.NewPositions;
-        //                v.PercentExpectations = m.PercentExpectations;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            db.MonthlyRecruitings.Add(m);
-        //        };
-        //        db.SaveChanges();
-        //    }
-        //}
+
         // GET: MonthlyRecruitings/Details/5
         public ActionResult Details(int? id)
         {

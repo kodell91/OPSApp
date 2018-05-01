@@ -24,7 +24,7 @@ namespace OPSA.Controllers
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            var model = new List<TPPCGrossProfit>();
+            //var model = new List<TPPCGrossProfit>();
 
             using (conn)
             {
@@ -37,14 +37,12 @@ namespace OPSA.Controllers
                         //Console.WriteLine(rdr.GetString(1));
 
                         var tppcGrossProfit = new TPPCGrossProfit();
-                        //tppcGrossProfit.TPPCId = rdr.GetInt32(0);
-                        //tppcGrossProfit.EmployeeId = rdr.GetString(1);
                         tppcGrossProfit.EmployeeName = rdr.GetString(0);
                         tppcGrossProfit.NewGPRanking = rdr.GetDouble(1);
                         tppcGrossProfit.BiWeekGP = rdr.GetDouble(2);
                         tppcGrossProfit.YTDContractGP = rdr.GetDouble(3);
                         tppcGrossProfit.YTDDirectHireGP = rdr.GetDouble(4);
-                        //tppcGrossProfit.AdditionDHAllocation = rdr.GetDouble(5);
+                        tppcGrossProfit.AdditionDHAllocation = rdr.GetDouble(5);
                         tppcGrossProfit.TotalGP = rdr.GetDouble(6);
                         tppcGrossProfit.QualifyingTotalGP = rdr.GetDouble(7);
                         tppcGrossProfit.TotalGPTarget = rdr.GetDouble(8);
@@ -53,18 +51,50 @@ namespace OPSA.Controllers
                         tppcGrossProfit.QualifyingNewGP = rdr.GetDouble(11);
                         tppcGrossProfit.NewGPTarget = rdr.GetDouble(12);
                         tppcGrossProfit.PercentNewGP = rdr.GetDouble(13);
-                        
 
-                        model.Add(tppcGrossProfit);
+                        SaveIfNew(tppcGrossProfit);
+                        //model.Add(tppcGrossProfit);
                     }
                     rdr.NextResult();
                 }
-
             }
-            //return View(db.TPPCGrossProfits.ToList());
-            return View(model);
+            return View(db.TPPCGrossProfits.ToList());
+            //return View(model);
         }
+        public void SaveIfNew(TPPCGrossProfit m)
+        {
+            using (OPSAEntities db = new OPSAEntities())
+            {
 
+                if (m.TPPCId >= 0)
+                {
+                    var v = db.TPPCGrossProfits.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
+                    if (v != null)
+                    {
+                        v.EmployeeName = m.EmployeeName;
+                        v.NewGPRanking = m.NewGPRanking;
+                        v.BiWeekGP = m.BiWeekGP;
+                        v.YTDContractGP = m.YTDContractGP;
+                        v.YTDDirectHireGP = m.YTDDirectHireGP;
+                        v.AdditionDHAllocation = m.AdditionDHAllocation;
+                        v.TotalGP = m.TotalGP;
+                        v.QualifyingTotalGP = m.QualifyingTotalGP;
+                        v.TotalGPTarget = m.TotalGPTarget;
+                        v.PercentTotalGP = m.PercentTotalGP;
+                        v.NewContractGP = m.NewContractGP;
+                        v.QualifyingNewGP = m.QualifyingNewGP;
+                        v.NewGPTarget = m.NewGPTarget;
+                        v.PercentNewGP = m.PercentNewGP;
+                    }
+                    else if (v == null)
+                    {
+                        db.TPPCGrossProfits.Add(m);
+                    }
+
+                }
+                db.SaveChanges();
+            }
+        }
         // GET: TPPCGrossProfits/Details/5
         public ActionResult Details(int? id)
         {

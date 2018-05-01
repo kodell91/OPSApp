@@ -16,7 +16,7 @@ namespace OPSA.Models
         public string EmployeeName { get; set; }
 
         [DisplayName("Tenure (Months)")]
-        public int Tenure { get; set; }
+        public double Tenure { get; set; }
 
         //TODO: Change to better date format
         [DisplayName("Start Date")]

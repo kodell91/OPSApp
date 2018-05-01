@@ -312,3 +312,15 @@ C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.dll
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.pdb
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\bin\Microsoft.ReportViewer.WebForms.DLL
 C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\bin\WebActivatorEx.dll
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.tryanyways.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.Employee.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.sqlstuff.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.sqlstuff2.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.gettingthere.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.stuff.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.recruiting.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.gahhhhh.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.csproj.GenerateResource.Cache
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.trytrytryagain.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.cmonman.resources
+C:\Users\Jimmy O'Dell\Desktop\OPSA\OPSA\obj\Release\OPSA.Migrations.workpleeease.resources

@@ -24,7 +24,6 @@ namespace OPSA.Models
 
         [DisplayFormat(DataFormatString = "{0:C0}")]
         [DisplayName("YTD Direct Hire GP")]
-        [NotMapped]
         public double YTDDirectHireGP { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:C0}")]

@@ -24,7 +24,7 @@ namespace OPSA.Controllers
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            var model = new List<NADGrossProfit>();
+            //var model = new List<NADGrossProfit>();
             using (conn)
             {
                 conn.Open();
@@ -45,16 +45,41 @@ namespace OPSA.Controllers
                         nadGrossProfit.GPTarget = rdr.GetDouble(4);
                         nadGrossProfit.PercentGP = rdr.GetDouble(5);
 
-                        model.Add(nadGrossProfit);
+                        SaveIfNew(nadGrossProfit);
+                        //model.Add(nadGrossProfit);
                     }
                     rdr.NextResult();
                 }
 
             }
-            return View(model);
+            return View(db.NADGrossProfits.ToList());
         }
         //db.NADGrossProfits.ToList()
+        public void SaveIfNew(NADGrossProfit m)
+        {
+            using (OPSAEntities db = new OPSAEntities())
+            {
 
+                if (m.NADId >= 0)
+                {
+                    var v = db.NADGrossProfits.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
+                    if (v != null)
+                    {
+                        v.EmployeeName = m.EmployeeName;
+                        v.BiWeeklyGP = m.BiWeeklyGP;
+                        v.YTDDirectHireGP = m.YTDDirectHireGP;
+                        v.YTDGPCombined = m.YTDGPCombined;
+                        v.GPTarget = m.GPTarget;
+                        v.PercentGP = m.PercentGP;
+                    }
+                    else if (v == null)
+                    {
+                        db.NADGrossProfits.Add(m);
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
         // GET: NADGrossProfits/Details/5
         public ActionResult Details(int? id)
         {

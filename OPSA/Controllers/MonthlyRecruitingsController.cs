@@ -46,25 +46,55 @@ namespace OPSA.Controllers
                         monthlyRecruiting.PreviousRank = rdr.GetInt32(2);
                         monthlyRecruiting.CompanyRank = rdr.GetInt32(3);
                         monthlyRecruiting.PositionRank = rdr.GetInt32(4);
-                        //monthlyRecruiting.AdditionDHAllocation = rdr.GetDouble(5);
                         monthlyRecruiting.Score = rdr.GetDouble(5);
                         monthlyRecruiting.Total4WKStarts = rdr.GetDouble(6);
                         monthlyRecruiting.CurrentHeadCount = rdr.GetDouble(7);
                         monthlyRecruiting.MonthHCGoal = rdr.GetDouble(8);
                         monthlyRecruiting.Prescreens = rdr.GetDouble(9);
                         monthlyRecruiting.Sendouts = rdr.GetDouble(10);
-                        monthlyRecruiting.NewPositions = rdr.GetDouble(11);
-                        monthlyRecruiting.PercentExpectations = rdr.GetDouble(12);
-
+                        monthlyRecruiting.ClientVisits = rdr.GetDouble(11);
+                        monthlyRecruiting.NewPositions = rdr.GetDouble(12);
+                        monthlyRecruiting.PercentExpectations = rdr.GetDouble(13);
 
                         model.Add(monthlyRecruiting);
+//                        SaveIfNew(monthlyRecruiting);
                     }
                     rdr.NextResult();
                 }
                 return View(model);
             }
         }
-
+        //public void SaveIfNew(MonthlyRecruiting m)
+        //{
+        //    using (db)
+        //    {
+        //        if (m.EmployeeId > 0)
+        //        {
+        //            var v = db.MonthlyRecruitings.Where(a => a.EmployeeName == m.EmployeeName).FirstOrDefault();
+        //            if (v != null)
+        //            {
+        //                v.RankDifference = m.RankDifference;
+        //                v.PreviousRank = m.PreviousRank;
+        //                v.CompanyRank = m.CompanyRank;
+        //                v.PositionRank = m.PositionRank;
+        //                v.Score = m.Score;
+        //                v.Total4WKStarts = m.Total4WKStarts;
+        //                v.CurrentHeadCount = m.CurrentHeadCount;
+        //                v.MonthHCGoal = m.MonthHCGoal;
+        //                v.Prescreens = m.PreviousRank;
+        //                v.Sendouts = m.Sendouts;
+        //                v.ClientVisits = m.ClientVisits;
+        //                v.NewPositions = m.NewPositions;
+        //                v.PercentExpectations = m.PercentExpectations;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            db.MonthlyRecruitings.Add(m);
+        //        };
+        //        db.SaveChanges();
+        //    }
+        //}
         // GET: MonthlyRecruitings/Details/5
         public ActionResult Details(int? id)
         {

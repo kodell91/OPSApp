@@ -8,6 +8,57 @@
     background-color: #3a3a3c;
 }
 
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.navbar-brand {
+    position: relative;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    border: 0;
+    width: 135px;
+    height: 40px;
+}
+
+.container > .navbar-header, .container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn {
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 8px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -27,3 +78,143 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.dataTables_wrapper {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    position: relative;
+    clear: both;
+    *zoom: 1;
+    zoom: 1;
+    color: #fff;
+}
+
+.ui.table th {
+    cursor: auto;
+    text-align: left;
+    color: #fff;
+    padding: 0.5em 0.7em;
+    vertical-align: middle;
+}
+
+.ui.celled.table {
+    color: #fff;
+}
+
+.table {
+    background-color: #3A3B3C;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid #282828;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+    .table table {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        background-color: #3A3B3C;
+        color: #FFF;
+    }
+
+    .table tr:last-child td:last-child {
+        -moz-border-radius-bottomright: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .table table tr:first-child td:first-child {
+        -moz-border-radius-topleft: 0px;
+        -webkit-border-top-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .table table tr:first-child td:last-child {
+        -moz-border-radius-topright: 0px;
+        -webkit-border-top-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .table tr:last-child td:first-child {
+        -moz-border-radius-bottomleft: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .table tr:hover td {
+        background-color: #f4eded;
+    }
+
+    .table td {
+        vertical-align: middle;
+        border: 1px solid #282828;
+        border-width: 0;
+        text-align: left;
+        padding: 15px;
+        font-size: 12px;
+        font-family: Arial;
+        font-weight: normal;
+        color: #bbb;
+    }
+
+    .table tr:last-child td {
+        border-width: 0px 1px 0px 0px;
+    }
+
+    .table tr td:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+
+    .table tr:last-child td:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+
+    .table tr:first-child td {
+        background-color: #1e1e1e !important;
+        border-bottom: 0px solid #000000;
+        border-width: 0px 0px 1px 0px;
+        /*font-size: 12px;
+        font-family: Arial;
+        font-weight: bold;*/
+        color: #fff !important;
+    }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+    margin-top: 0;
+}  
+    .table a {
+        color: #ccc;
+    }
+
+    .table tr:nth-child(2n+1) td {
+        background-color: #151515;
+        color: #bbb !important;
+    }
+
+    .table tr:nth-child(even) td {
+        background-color: #0F0F0F;
+    }
+
+    .table td.job-title a {
+        color: #00688D;
+    }
+
+        .table td.job-title a:hover {
+            text-decoration: none;
+        }

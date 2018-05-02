@@ -26,11 +26,13 @@ namespace OPSA
                         "~/Content/DataTables/dataTables.semanticui.css",
                       "~/Content/semantic.css",
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/DataTables/dataTables.semanticui.js",
                         "~/Scripts/bootstrap.js",
+                        "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/fullCalendar").Include(

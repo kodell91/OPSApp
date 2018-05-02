@@ -21,7 +21,7 @@ namespace OPSA.Models
     public class OPSAEntities : IdentityDbContext<ApplicationUser>
     {
         public OPSAEntities()
-            : base("Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True", throwIfV1Schema: false)
+            : base("Data Source = SQL7001.site4now.net; Initial Catalog = DB_A33255_OPSA; User Id = DB_A33255_OPSA_admin; Password = KennethGetsA5!; ", throwIfV1Schema: false)
         {
         }
 

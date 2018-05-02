@@ -25,16 +25,16 @@ namespace OPSA
             if (!roleAdminRole.RoleExists("Admin"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "SuperUser";
+                role.Name = "Admin";
                 roleAdminRole.Create(role);
                 var user = new ApplicationUser();
-                user.Email = "adming@gmail.com";
+                user.Email = "admin@gmail.com";
                 string userPWD = "Password1!";
                 var chkUser = roleAdminUser.Create(user, userPWD);
 
                 if (chkUser.Succeeded)
                 {
-                    var result1 = roleAdminUser.AddToRole(user.Id, "SuperUser");
+                    var result1 = roleAdminUser.AddToRole(user.Id, "Admin");
                 }
             }
         }

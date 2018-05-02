@@ -24,7 +24,7 @@ namespace OPSA.Controllers
         {
             //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             //SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True");
-            String connectionString = @"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            String connectionString = @"Data Source = SQL7001.site4now.net; Initial Catalog = DB_A33255_OPSA; User Id = DB_A33255_OPSA_admin; Password = KennethGetsA5!; ";
             SqlConnection conn = new SqlConnection(connectionString);
             dynamic sql = "dbo.SelectEmployee";
             SqlCommand cmd = new SqlCommand(sql, conn);

@@ -22,7 +22,9 @@ namespace OPSA.Controllers
 
         public ActionResult Index()
         {
-            String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            //SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True");
+            String connectionString = @"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
             dynamic sql = "dbo.SelectEmployee";
             SqlCommand cmd = new SqlCommand(sql, conn);

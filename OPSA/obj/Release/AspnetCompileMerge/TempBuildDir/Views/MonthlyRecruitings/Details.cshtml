@@ -1,0 +1,130 @@
+﻿@model OPSA.Models.MonthlyRecruiting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MonthlyRecruiting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankDifference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankDifference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousRank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousRank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyRank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyRank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionRank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionRank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total4WKStarts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total4WKStarts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentHeadCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentHeadCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthHCGoal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthHCGoal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prescreens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prescreens)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sendouts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sendouts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientVisits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientVisits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewPositions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewPositions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PercentExpectations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PercentExpectations)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

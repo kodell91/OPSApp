@@ -1,0 +1,66 @@
+﻿@model OPSA.Models.NADGrossProfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NADGrossProfit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BiWeeklyGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BiWeeklyGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YTDDirectHireGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YTDDirectHireGP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YTDGPCombined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YTDGPCombined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GPTarget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GPTarget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PercentGP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PercentGP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NADId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

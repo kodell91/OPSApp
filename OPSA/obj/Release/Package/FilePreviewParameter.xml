@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="danielguelzo-001-site22" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Jimmy\ O'Dell\\Desktop\\OPSA\\OPSA\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Jimmy\ O'Dell\\Desktop\\OPSA\\OPSA\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." value="Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jimmy\ O'Dell\\Desktop\\OPSA\\OPSA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="OPSA.Models.OPSAEntities-Web.config Connection String" description="OPSA.Models.OPSAEntities Connection String used in web.config by the application to access the database." value="OPSA.Models.OPSAEntities_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jimmy\ O'Dell\\Desktop\\OPSA\\OPSA\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OPSA.Models.OPSAEntities']/@connectionString" />
+  </parameter>
+</parameters>

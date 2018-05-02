@@ -1,0 +1,120 @@
+﻿@model IEnumerable<OPSA.Models.MonthlyRecruiting>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="ui celled table" id="myTable" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankDifference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreviousRank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyRank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionRank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total4WKStarts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentHeadCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthHCGoal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prescreens)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sendouts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientVisits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewPositions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PercentExpectations)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RankDifference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreviousRank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyRank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionRank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total4WKStarts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentHeadCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthHCGoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prescreens)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sendouts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientVisits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewPositions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PercentExpectations)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<script>
+$(document).ready(function () {
+            $('#myTable').DataTable({
+            "autoWidth": true});
+            });
+</script>

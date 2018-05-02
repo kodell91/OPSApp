@@ -18,8 +18,10 @@ namespace OPSA.Controllers
         // GET: TPPCGrossProfits
         public ActionResult Index()
         {
-            String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            String connectionString = @"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
+            //SqlConnection conn = new SqlConnection(@"Data Source = LAPTOP - VCM6MJ7Q; Initial Catalog = OPSA; Integrated Security = True");
             dynamic sql = "dbo.SelectTPPCDetails";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;

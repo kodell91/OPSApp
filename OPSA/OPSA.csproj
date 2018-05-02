@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -113,9 +112,6 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.1\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -280,59 +276,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804280227549_tryanyways.cs" />
-    <Compile Include="Migrations\201804280227549_tryanyways.Designer.cs">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281715182_Employee.cs" />
-    <Compile Include="Migrations\201804281715182_Employee.Designer.cs">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281945478_sqlstuff.cs" />
-    <Compile Include="Migrations\201804281945478_sqlstuff.Designer.cs">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804281952147_sqlstuff2.cs" />
-    <Compile Include="Migrations\201804281952147_sqlstuff2.Designer.cs">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804282228347_gettingthere.cs" />
-    <Compile Include="Migrations\201804282228347_gettingthere.Designer.cs">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804300441386_stuff.cs" />
-    <Compile Include="Migrations\201804300441386_stuff.Designer.cs">
-      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804301406247_recruiting.cs" />
-    <Compile Include="Migrations\201804301406247_recruiting.Designer.cs">
-      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804301413557_gahhhhh.cs" />
-    <Compile Include="Migrations\201804301413557_gahhhhh.Designer.cs">
-      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805011435247_trytrytryagain.cs" />
-    <Compile Include="Migrations\201805011435247_trytrytryagain.Designer.cs">
-      <DependentUpon>201805011435247_trytrytryagain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805011442100_cmonman.cs" />
-    <Compile Include="Migrations\201805011442100_cmonman.Designer.cs">
-      <DependentUpon>201805011442100_cmonman.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805011555091_workpleeease.cs" />
-    <Compile Include="Migrations\201805011555091_workpleeease.Designer.cs">
-      <DependentUpon>201805011555091_workpleeease.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805012034326_what.cs" />
-    <Compile Include="Migrations\201805012034326_what.Designer.cs">
-      <DependentUpon>201805012034326_what.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201805012138489_cmooooon.cs" />
-    <Compile Include="Migrations\201805012138489_cmooooon.Designer.cs">
-      <DependentUpon>201805012138489_cmooooon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -343,11 +286,6 @@
     <Compile Include="Models\Ranking.cs" />
     <Compile Include="Models\MonthlyRecruiting.cs" />
     <Compile Include="Models\TPPCGrossProfit.cs" />
-    <Compile Include="Reports\NADSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NADSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reports\NADSheet.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -361,11 +299,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TestReport.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TestSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TestSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -568,6 +501,7 @@
     <Content Include="fonts\basic.icons.woff" />
     <Content Include="fonts\basic.icons.ttf" />
     <Content Include="fonts\basic.icons.eot" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -945,14 +879,18 @@
     <Content Include="semantic\uncompressed\views\list.css" />
     <Content Include="semantic\uncompressed\views\sitemap.css" />
     <Content Include="semantic\uncompressed\views\statistic.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -984,33 +922,11 @@
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\AssignRoleToUser.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
-    <Content Include="Reports\TestSet.xsc">
-      <DependentUpon>TestSet.xsd</DependentUpon>
-    </Content>
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
-    <Content Include="Reports\NADSet.xsc">
-      <DependentUpon>NADSet.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\NADSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NADSet.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\NADSet.xss">
-      <DependentUpon>NADSet.xsd</DependentUpon>
-    </Content>
-    <None Include="Reports\TestSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TestSet.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Reports\TestSet.xss">
-      <DependentUpon>TestSet.xsd</DependentUpon>
-    </Content>
     <Content Include="Views\NADGrossProfits\Create.cshtml" />
     <Content Include="Views\NADGrossProfits\Delete.cshtml" />
     <Content Include="Views\NADGrossProfits\Details.cshtml" />
@@ -1097,45 +1013,6 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804280227549_tryanyways.resx">
-      <DependentUpon>201804280227549_tryanyways.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281715182_Employee.resx">
-      <DependentUpon>201804281715182_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281945478_sqlstuff.resx">
-      <DependentUpon>201804281945478_sqlstuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804281952147_sqlstuff2.resx">
-      <DependentUpon>201804281952147_sqlstuff2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804282228347_gettingthere.resx">
-      <DependentUpon>201804282228347_gettingthere.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804300441386_stuff.resx">
-      <DependentUpon>201804300441386_stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804301406247_recruiting.resx">
-      <DependentUpon>201804301406247_recruiting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804301413557_gahhhhh.resx">
-      <DependentUpon>201804301413557_gahhhhh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805011435247_trytrytryagain.resx">
-      <DependentUpon>201805011435247_trytrytryagain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805011442100_cmonman.resx">
-      <DependentUpon>201805011442100_cmonman.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805011555091_workpleeease.resx">
-      <DependentUpon>201805011555091_workpleeease.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805012034326_what.resx">
-      <DependentUpon>201805012034326_what.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805012138489_cmooooon.resx">
-      <DependentUpon>201805012138489_cmooooon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\NADSheet.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>NADSheet.cs</LastGenOutput>
@@ -1179,7 +1056,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

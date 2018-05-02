@@ -21,7 +21,7 @@ namespace OPSA.Models
     public class OPSAEntities : IdentityDbContext<ApplicationUser>
     {
         public OPSAEntities()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True", throwIfV1Schema: false)
         {
         }
 

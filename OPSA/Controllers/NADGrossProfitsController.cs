@@ -18,8 +18,9 @@ namespace OPSA.Controllers
         // GET: NADGrossProfits
         public ActionResult Index()
         {
-            String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
+            String connectionString = @"Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connectionString);
+            //SqlConnection conn = new SqlConnection("Data Source = LAPTOP - VCM6MJ7Q; Initial Catalog = OPSA; Integrated Security = True");
             dynamic sql = "dbo.SelectNADDetails";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.StoredProcedure;

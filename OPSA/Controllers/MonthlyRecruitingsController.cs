@@ -16,6 +16,7 @@ namespace OPSA.Controllers
         private OPSAEntities db = new OPSAEntities();
 
         // GET: MonthlyRecruitings
+        [Authorize]
         public ActionResult Index()
         {
             //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
@@ -97,6 +98,7 @@ namespace OPSA.Controllers
         }
 
         // GET: MonthlyRecruitings/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -112,6 +114,7 @@ namespace OPSA.Controllers
         }
 
         // GET: MonthlyRecruitings/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -122,6 +125,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "EmployeeId,EmployeeName,RankDifference,PreviousRank,CompanyRank,PositionRank,Score,Total4WKStarts,CurrentHeadCount,MonthHCGoal,Prescreens,Sendouts,ClientVisits,NewPositions,PercentExpectations")] MonthlyRecruiting monthlyRecruiting)
         {
             if (ModelState.IsValid)
@@ -135,6 +139,7 @@ namespace OPSA.Controllers
         }
 
         // GET: MonthlyRecruitings/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -154,6 +159,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "EmployeeId,EmployeeName,RankDifference,PreviousRank,CompanyRank,PositionRank,Score,Total4WKStarts,CurrentHeadCount,MonthHCGoal,Prescreens,Sendouts,ClientVisits,NewPositions,PercentExpectations")] MonthlyRecruiting monthlyRecruiting)
         {
             if (ModelState.IsValid)
@@ -166,6 +172,7 @@ namespace OPSA.Controllers
         }
 
         // GET: MonthlyRecruitings/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -183,6 +190,7 @@ namespace OPSA.Controllers
         // POST: MonthlyRecruitings/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             MonthlyRecruiting monthlyRecruiting = db.MonthlyRecruitings.Find(id);

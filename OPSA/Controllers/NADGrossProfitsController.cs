@@ -16,6 +16,7 @@ namespace OPSA.Controllers
         private OPSAEntities db = new OPSAEntities();
 
         // GET: NADGrossProfits
+        [Authorize]
         public ActionResult Index()
         {
             String connectionString = @"Data Source = SQL7001.site4now.net; Initial Catalog = DB_A33255_OPSA; User Id = DB_A33255_OPSA_admin; Password = KennethGetsA5!; ";
@@ -82,6 +83,7 @@ namespace OPSA.Controllers
             }
         }
         // GET: NADGrossProfits/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -107,6 +109,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "NADId,EmployeeName,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
         {
             if (ModelState.IsValid)
@@ -120,6 +123,7 @@ namespace OPSA.Controllers
         }
 
         // GET: NADGrossProfits/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -139,6 +143,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "NADId,EmployeeName,BiWeeklyGP,YTDDirectHireGP,YTDGPCombined,GPTarget,PercentGP")] NADGrossProfit nADGrossProfit)
         {
             if (ModelState.IsValid)
@@ -151,6 +156,7 @@ namespace OPSA.Controllers
         }
 
         // GET: NADGrossProfits/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -168,6 +174,7 @@ namespace OPSA.Controllers
         // POST: NADGrossProfits/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             NADGrossProfit nADGrossProfit = db.NADGrossProfits.Find(id);

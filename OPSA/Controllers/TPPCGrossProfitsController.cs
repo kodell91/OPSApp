@@ -16,6 +16,7 @@ namespace OPSA.Controllers
         private OPSAEntities db = new OPSAEntities();
 
         // GET: TPPCGrossProfits
+        [Authorize]
         public ActionResult Index()
         {
             //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
@@ -98,6 +99,7 @@ namespace OPSA.Controllers
             }
         }
         // GET: TPPCGrossProfits/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -113,6 +115,7 @@ namespace OPSA.Controllers
         }
 
         // GET: TPPCGrossProfits/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -123,6 +126,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "TPPCId,EmployeeId,NewGPRanking,YTDContractGP,YTDDirectHireGP,AdditionDHAllocation,TotalGP,QualifyingTotalGP,NewContractGP,QualifyingNewGP,NewGPTarget,PercentNewGP")] TPPCGrossProfit tPPCGrossProfit)
         {
             if (ModelState.IsValid)
@@ -136,6 +140,7 @@ namespace OPSA.Controllers
         }
 
         // GET: TPPCGrossProfits/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -155,6 +160,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "TPPCId,EmployeeId,NewGPRanking,YTDContractGP,YTDDirectHireGP,AdditionDHAllocation,TotalGP,QualifyingTotalGP,NewContractGP,QualifyingNewGP,NewGPTarget,PercentNewGP")] TPPCGrossProfit tPPCGrossProfit)
         {
             if (ModelState.IsValid)
@@ -167,6 +173,7 @@ namespace OPSA.Controllers
         }
 
         // GET: TPPCGrossProfits/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -184,6 +191,7 @@ namespace OPSA.Controllers
         // POST: TPPCGrossProfits/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             TPPCGrossProfit tPPCGrossProfit = db.TPPCGrossProfits.Find(id);

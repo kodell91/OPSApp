@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>National Account Directors</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -18,9 +18,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.BiWeeklyGP)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.YTDDirectHireGP)
-            </th>
+            @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.YTDDirectHireGP)
+                </th>
+            }
             <th>
                 @Html.DisplayNameFor(model => model.YTDGPCombined)
             </th>
@@ -43,9 +46,12 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.BiWeeklyGP)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
-                </td>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YTDDirectHireGP)
+                    </td>
+                }
                 <td>
                     @Html.DisplayFor(modelItem => item.YTDGPCombined)
                 </td>
@@ -55,11 +61,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.PercentGP)
                 </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.NADId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.NADId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.NADId })
-                </td>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.NADId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.NADId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.NADId })
+                    </td>
+                }
             </tr>
         }
     </tbody>

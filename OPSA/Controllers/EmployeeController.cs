@@ -19,7 +19,7 @@ namespace OPSA.Controllers
         //This index uses the connection string provided in web.config to do SQL on the DB the solution is connected to
         //It then defines a List of Employees, uses a stored procedure and SQLDataReader to populate the list of Employees
         //This list of employees is then returned into the view
-
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             //String connectionString = "Data Source=LAPTOP-VCM6MJ7Q;Initial Catalog=OPSA;Integrated Security=True";
@@ -82,6 +82,7 @@ namespace OPSA.Controllers
             }
         }
         // GET: Employee/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -97,6 +98,7 @@ namespace OPSA.Controllers
         }
 
         // GET: Employee/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -107,6 +109,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "EmployeeId,EmployeeName,Tenure,StartDate,Position,Branch")] Employee employee)
         {
             if (ModelState.IsValid)
@@ -120,6 +123,7 @@ namespace OPSA.Controllers
         }
 
         // GET: Employee/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -139,6 +143,7 @@ namespace OPSA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "EmployeeId,EmployeeName,Tenure,StartDate,Position,Branch")] Employee Employee)
         {
             if (ModelState.IsValid)
@@ -151,6 +156,7 @@ namespace OPSA.Controllers
         }
 
         // GET: Employee/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -168,6 +174,7 @@ namespace OPSA.Controllers
         // POST: Employee/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Employee employee = db.Employees.Find(id);

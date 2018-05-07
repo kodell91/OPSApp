@@ -218,3 +218,6 @@ textarea {
         .table td.job-title a:hover {
             text-decoration: none;
         }
+        .modal{
+            color: black;
+        }

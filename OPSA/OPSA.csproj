@@ -475,8 +475,37 @@
     <Content Include="Content\fullcalendar.min.css" />
     <Content Include="Content\fullcalendar.print.css" />
     <Content Include="Content\fullcalendar.print.min.css" />
+    <Content Include="Content\Images\android-chrome-192x192.png" />
+    <Content Include="Content\Images\android-chrome-512x512.png" />
+    <Content Include="Content\Images\apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-114x114.png" />
+    <Content Include="Content\Images\apple-touch-icon-120x120-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-120x120.png" />
+    <Content Include="Content\Images\apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-144x144.png" />
+    <Content Include="Content\Images\apple-touch-icon-152x152-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-152x152.png" />
+    <Content Include="Content\Images\apple-touch-icon-180x180-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-180x180.png" />
+    <Content Include="Content\Images\apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-57x57.png" />
+    <Content Include="Content\Images\apple-touch-icon-60x60-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-60x60.png" />
+    <Content Include="Content\Images\apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-72x72.png" />
+    <Content Include="Content\Images\apple-touch-icon-76x76-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon-76x76.png" />
+    <Content Include="Content\Images\apple-touch-icon-precomposed.png" />
+    <Content Include="Content\Images\apple-touch-icon.png" />
     <Content Include="Content\Images\bg.jpg" />
+    <Content Include="Content\Images\browserconfig.xml" />
     <Content Include="Content\Images\cat.png" />
+    <Content Include="Content\Images\favicon-16x16.png" />
+    <Content Include="Content\Images\favicon-32x32.png" />
+    <Content Include="Content\Images\favicon.ico" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\mstile-150x150.png" />
+    <Content Include="Content\Images\safari-pinned-tab.svg" />
     <Content Include="Content\semantic.css" />
     <Content Include="Content\semantic.min.css" />
     <Content Include="Content\semantic.site.css" />
@@ -507,6 +536,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\Images\site.webmanifest" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -882,6 +912,9 @@
     <Content Include="semantic\uncompressed\views\list.css" />
     <Content Include="semantic\uncompressed\views\sitemap.css" />
     <Content Include="semantic\uncompressed\views\statistic.css" />
+    <Content Include="Content\src\addtohomescreen.js" />
+    <Content Include="Content\src\addtohomescreen.min.js" />
+    <Content Include="Content\style\addtohomescreen.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

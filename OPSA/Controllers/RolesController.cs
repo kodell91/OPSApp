@@ -18,6 +18,7 @@ namespace OPSA.Controllers
             db = new OPSAEntities();
         }
         // Getting all roles and putting them in an object
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var Roles = db.Roles.ToList();
@@ -25,6 +26,7 @@ namespace OPSA.Controllers
         }
 
         //Create a New Role
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             var Role = new IdentityRole();
@@ -32,6 +34,7 @@ namespace OPSA.Controllers
         }
 
         //Create a New Role
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult Create(IdentityRole Role)
         {

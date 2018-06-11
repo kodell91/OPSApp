@@ -1,0 +1,179 @@
+﻿@*@model GPCMobile1.Models.Calculator*@
+
+@{
+    ViewBag.Title = "GPC Mobile";
+}
+
+
+<h2>Gross Profit Calculator</h2>
+
+
+@using (Html.BeginForm("Calculate", "Calculators", FormMethod.Post))
+{
+<form id="CalculatorForm">
+    <!--<input type="hidden" value="@Model.VP_CEO_Approval" id="Approval" />-->
+
+    <table class="table">
+        <tr>
+            <td>
+                <label>
+                    Client Selection
+                </label>
+            </td>
+            <td>
+                <!--<form>-->
+                <div class="dropdown">
+                    <select name="client" id="client" class="form-control dropdownselector clientdropdown" onchange="clientChangeHandler()">
+                        <option value="Generic">Generic</option>
+                        <option value="Ally">Ally</option>
+                        <option value="Fiserv">Fiserv</option>
+                        <option value="NCR">NCR</option>
+                    </select>
+                </div>
+                <!--</form>-->
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                @Html.LabelFor(m => m.PayRate)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.PayRate, new { @class = "form-control gpText payrate generic" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.ConvCompTF)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ConvCompTF, new { @class = "form-control gpText convcomp" })
+            </td>
+
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.BillRate)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.BillRate, new { @class = "form-control gpText billrate generic" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.BillableHRSbeforeConv)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.BillableHRSbeforeConv, new { @class = "form-control gpText billablehrs"})
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.LoadedPayRate)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.LoadedPayRate, new { @class = "form-control gpText loadedpay", @readonly = "readonly" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.BurdenRate)
+            </td>
+            <td>
+                <!--<form>-->
+                <div class="dropdown">
+                    <select name="burdenvalues" id="burdenvalues" class="form-control dropdownselector burdenrate" onchange="update()">
+                        <option value="14.0">14%</option>
+                        <option value="4.0">4%</option>
+                    </select>
+                </div>
+                <!--</form>-->
+                @*@Html.TextBoxFor(m => m.BurdenRate, new { @class = "form-control gpText burdenrate", @readonly = "readonly" })*@
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Markup)
+            </td>
+            <td>
+                @*BJR Set Markup to Read Only*@
+                @Html.TextBoxFor(m => m.Markup, new { @class = "form-control gpText markup generic" })
+                <input type="hidden" id="markupally" value="@Model._MarkupAlly" name="MarkupAlly" />
+                <input type="hidden" id="markupfiserv" value="@Model._MarkupFiserv" name="MarkupFiserv" />
+                <input type="hidden" id="markupncr" value="@Model._MarkupNCR" name="MarkupNCR" />
+
+
+            </td>
+
+            <td>
+                @Html.LabelFor(m => m.HourlyBurden)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.HourlyBurden, new { @class = "form-control gpText hourlyburden", @readonly = "readonly" })
+            </td>
+
+        </tr>
+        @*BJR added VMS Rate and VMS Result to view*@
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.VMSRate, new { @class = "vms" })
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.VMSRate, new { @class = "form-control gpText vmsrate vms", @readonly = "readonly" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.VMSResult, new { @class = "vms" })
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.VMSResult, new { @class = "form-control gpText vmsresult vms", @readonly = "readonly" })
+            </td>
+
+        </tr>
+    </table>
+    <hr />
+    <table class="table">
+        <!--style="max-width:355px;">-->
+        <tr>
+
+            <td>
+                @Html.LabelFor(m => m.GrossProfitMargin)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.GrossProfitMargin, new { @id = "gpm", @class = "form-control result grossprofitmargin", @readonly = "readonly" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.GrossProfit)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.GrossProfit, new { @class = "form-control result grossprofit", @readonly = "readonly" })
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.AnnualGP)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.AnnualGP, new { @class = "form-control result annualgrossprofit", @readonly = "readonly" })
+            </td>
+            <td>
+                @Html.LabelFor(m => m.CostToClient)
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.CostToClient, new { @class = "form-control result costtoclient", @readonly = "readonly" })
+            </td>
+        </tr>
+
+
+
+    </table>
+    <!--<input type="submit" value="Calculate" />-->
+    <!--//BJR added reset button-->
+    <input type="button" onclick="clientChangeHandler()" value="Clear" />
+
+</form>
+}
+
+
+
+
+
+<script src="~/Scripts/Calculator.js"></script>

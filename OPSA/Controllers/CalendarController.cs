@@ -20,7 +20,8 @@ namespace OPSA.Controllers
         {
             db = new OPSAEntities();
         }
-
+        
+        [Authorize]
         public ActionResult Calendar()
         {
             return View();
